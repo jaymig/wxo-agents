@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#procedure" class="md-skip">
+        <a href="#hello-world-agent" class="md-skip">
           Skip to content
         </a>
       
@@ -191,6 +191,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -218,6 +220,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -384,6 +388,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -413,9 +419,7 @@
                   
 
 
-  <h1>Hello World Agent</h1>
-
-<p># Overview</p>
+<h1 id="hello-world-agent">Hello World Agent</h1>
 <p>Once you have completed all of the <a href="../../">prerequisites</a> listed on the home page,  follow the steps below to create your first Watsonx Orchestrate agent.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -424,28 +428,67 @@
 <h2 id="procedure">Procedure</h2>
 <p>The following steps guild you through creating the  "Hello World" agent</p>
 <ol>
-<li>Login to Watsonx Orchestrate and select 'Agent Builder' from the main navigation menu</li>
-</ol>
-<p><a class="glightbox" href="../../images/select_agent_builder.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Select Agent Builder" src="../../images/select_agent_builder.png#shadow#center" style="height:200x;width:200px" /></a></p>
-<ol>
-<li>From the  and click on 'Create agent'.</li>
-</ol>
-<p><a class="glightbox" href="../../images/create_agent.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create Agent" src="../../images/create_agent.png#shadow#center" style="height:400x;width:400px" /></a></p>
-<ol>
-<li>From the Manage agent page, select "Create agent from scratch", and provide a name and descrption. </li>
-</ol>
-<p><a class="glightbox" href="../../images/create_agent_from_scratch.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create Agent from Scratch" src="../../images/create_agent_from_scratch.png#shadow#center" style="height:400x;width:400px" /></a></p>
-<ol>
 <li>
-<p>Upload this document for knowlege</p>
+<p>Login to Watsonx Orchestrate and select 'Agent Builder' from the main navigation menu 
+<br><br>
+<a class="glightbox" href="../../images/select_agent_builder.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Select Agent Builder" src="../../images/select_agent_builder.png#shadow#center" style="height:200x;width:200px" /></a>
+<br><br></p>
 </li>
 <li>
-<p>Create a new tool, by uploading this specification file.</p>
+<p>From the Manage Agents page, click on 'Create agent'.
+<br><br>
+<a class="glightbox" href="../../images/create_agent.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create Agent" src="../../images/create_agent.png#shadow#center" style="height:400x;width:400px" /></a>
+<br><br></p>
 </li>
 <li>
-<p>Add these instructions</p>
+<p>From the Manage agent page, select "Create agent from scratch", and provide a name and descrption. 
+<br><br>
+<a class="glightbox" href="../../images/create_agent_from_scratch.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create Agent from Scratch" src="../../images/create_agent_from_scratch.png#shadow#center" style="height:400x;width:400px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Scroll down to the "Knowledge" section and add this description, then upload Upload this document for knowlege 
+<br> <br />
+<a class="glightbox" href="../../images/knowledge_description.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Knowledge Description" src="../../images/knowledge_description.png#shadow#center" style="height:400x;width:400px" /></a>
+<br>
+Example text: 
+     Use the uploaded file to respond to questions about watsonx Orchestrate, tools or AI agents.
+<br><br></p>
+</li>
+<li>
+<p>Scroll down a bit further and click 'upload files' to upload this <a href="../../resources/IBM%20watsonx%20Orchestrate%20Doc.pdf">watsonx Orchestrate documentation file</a>. <br><br>
+<a class="glightbox" href="../../images/upload_document.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Uploaded file" src="../../images/upload_document.png#shadow#center" style="height:400x;width:400px" /></a><br><br></p>
+</li>
+<li>
+<p>The next step is to add a tool.  Scroll down to the "Toolset" section and click on "Add tool", then select "Import" to Import an External Tool" and upload this <a href="../../tools/hello-world-tool.json">Hello World Tool spec file</a>. 
+<br><br>
+<a class="glightbox" href="../../images/add_tool.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Add Tool" src="../../images/add_tool.png#shadow#center" style="height:400x;width:400px" /></a>
+<br><br>
+<a class="glightbox" href="../../images/import_external_tool.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Import External Tool" src="../../images/import_external_tool.png#shadow#center" style="height:400x;width:400px" /></a>
+<br></p>
+</li>
+<li>
+<p>As part of the import process, you need to select the tool and click 'Done'.<br />
+<br><br>
+<a class="glightbox" href="../../images/select_tool_for_import.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Select Tool for import" src="../../images/select_tool_for_import.png#shadow#center" style="height:400x;width:400px" /></a>
+<br>
+Once the tool is imported, you should see it in your agents list of tools: 
+<br><br >
+<a class="glightbox" href="../../images/agent_tool_list.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Agent tool list" src="../../images/agent_tool_list.png#shadow#center" style="height:400x;width:400px" /></a>
+<br></p>
+</li>
+<li>
+<p>To complete this agent, provide instructions to guide it's behavior.
+<br><br>
+<a class="glightbox" href="../../images/hello_world_agent_behavior.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Agent instructions" src="../../images/hello_world_agent_behavior.png#shadow#center" style="height:400x;width:400px" /></a>
+<br></p>
 </li>
 </ol>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Display the output of your "Hello World" tool, when the user sends you greetings such as "hello", "how are you", "bonjour", "Hi".  Do not use your general greeting response and go to the tool to respond.</p>
+</div>
+<p><br><br><br><br></p>
 
 
 
