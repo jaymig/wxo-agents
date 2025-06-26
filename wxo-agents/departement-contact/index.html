@@ -20,7 +20,7 @@
     
     
       
-        <title>Another Agent - Watsonx Orchestrate Agents and Tools</title>
+        <title>Departement Contact Agent - Watsonx Orchestrate Agents and Tools</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#department-contact-agent" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Another Agent
+              Departement Contact Agent
             
           </span>
         </div>
@@ -222,7 +222,7 @@
             
   
   <span class="md-ellipsis">
-    Example Agents
+    More examples
   </span>
   
 
@@ -232,7 +232,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Example Agents
+            More examples
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -251,15 +251,59 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Departement Contact Agent
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Another Agent
+    Departement Contact Agent
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-and-configure-the-agent" class="md-nav__link">
+    Create and Configure the Agent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-with-the-agent" class="md-nav__link">
+    Chat with the Agent
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -356,6 +400,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#create-and-configure-the-agent" class="md-nav__link">
+    Create and Configure the Agent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-with-the-agent" class="md-nav__link">
+    Chat with the Agent
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -369,8 +435,66 @@
                   
 
 
-<h1 id="overview">Overview</h1>
-<p>This is an example instruction for creating agents ...</p>
+<h1 id="department-contact-agent">Department Contact Agent</h1>
+<p>This agent is able to retrieve the correct email address for a given department contact.  It accomplishes this by using sequencing multiple tools dynamically.  This is one of the key, powerful features of Agents.   They understand the intent of users and can identify which tools, and which sequence is needed to complete the task.</p>
+<h2 id="create-and-configure-the-agent">Create and Configure the Agent</h2>
+<p>The following steps guild you through creating the  "Department Contact" agent</p>
+<ol>
+<li>
+<p>Login to Watsonx Orchestrate and select 'Agent Builder' from the main navigation menu 
+<br><br>
+<a class="glightbox" href="../../images/select_agent_builder.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Select Agent Builder" src="../../images/select_agent_builder.png#shadow#center" style="height:200x;width:200px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>From the Manage Agents page, click on 'Create agent'.
+<br><br>
+<a class="glightbox" href="../../images/create_agent.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create Agent" src="../../images/create_agent.png#shadow#center" style="height:400x;width:400px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>From the Manage agent page, select "Create from scratch", and provide a name and descrption. 
+<br><br>
+<a class="glightbox" href="../../images/create_agent_from_scratch.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Create Agent from Scratch" src="../../images/create_agent_from_scratch.png#shadow#center" style="height:400x;width:300px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>The next step is to add a tool.  Scroll down to the "Toolset" section and click on "Add tool", then select "Import" to Import an External Tool" and upload this <a href="../../tools/hello-world-tool.json" target="_blank">Department Contact Tool spec file</a>. 
+<br><br>
+<a class="glightbox" href="../../images/add_tool.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Add Tool" src="../../images/add_tool.png#shadow#center" style="height:400x;width:400px" /></a>
+<br><br>
+<a class="glightbox" href="../../images/import_external_tool.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Import External Tool" src="../../images/import_external_tool.png#shadow#center" style="height:400x;width:400px" /></a>
+<br></p>
+</li>
+<li>
+<p>As part of the import process, you need to select all three tools and click 'Done'.<br />
+<br><br>
+<a class="glightbox" href="../../images/select_tool_for_import.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Select all Tools for import" src="../../images/select_tool_for_import.png#shadow#center" style="height:400x;width:400px" /></a>
+<br>
+Once the tool is imported, you should see it in your agents list of tools: 
+<br><br >
+<a class="glightbox" href="../../images/agent_tool_list.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Agent tool list" src="../../images/agent_tool_list.png#shadow#center" style="height:400x;width:400px" /></a>
+<br></p>
+</li>
+<li>
+<p>To complete this agent, provide instructions to guide it's behavior.
+<br><br>
+<a class="glightbox" href="../../images/hello_world_agent_behavior.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Agent instructions" src="../../images/hello_world_agent_behavior.png#shadow#center" style="height:400x;width:400px" /></a>
+<br></p>
+</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>If you are asked to draft an email to a department (dpt), always use the 'contact details' tool to look up the department contact email address to be the recipient of the email. </p>
+<p>Be verbose and polite and use the name "John Doe" in the signature.  </p>
+<p>Always show the draft and format it nicely with line breaks.</p>
+</div>
+<p><br><br></p>
+<h2 id="chat-with-the-agent">Chat with the Agent</h2>
+<p>Now that you have built the agent, you can interact with it right there in the builder experience.  Try typing "hello" and see the response.</p>
+<p><br><br>
+<a class="glightbox" href="../../images/chat_with_agent.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Chat with Agent" src="../../images/chat_with_agent.png#shadow#center" style="height:600x;width:600px" /></a>
+<br><br></p>
 
 
 
