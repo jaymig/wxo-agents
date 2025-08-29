@@ -524,6 +524,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#send-a-message-to-the-agent" class="md-nav__link">
+    Send a message to the Agent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-the-messages" class="md-nav__link">
+    Get the messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -673,6 +694,27 @@
         <li class="md-nav__item">
   <a href="#get-the-agent-id" class="md-nav__link">
     Get the Agent ID
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#send-a-message-to-the-agent" class="md-nav__link">
+    Send a message to the Agent
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-the-messages" class="md-nav__link">
+    Get the messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
   </a>
   
 </li>
@@ -916,13 +958,52 @@ Copy the Agent ID and save it to your environment.
 <a class="glightbox" href="../../images/get_agent_id/environment_with_agent_id.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="environment with agent_idl" src="../../images/get_agent_id/environment_with_agent_id.png#shadow#left" style="height:500x;width:500px" /></a>
 <br><br></p>
 </li>
+</ol>
+<h2 id="send-a-message-to-the-agent">Send a message to the Agent</h2>
+<ol>
 <li>
 <p>Now that we have the Agent ID, we can use it in the /runs API call.  Navigate back to the Runs API configuration screens, select the body tab.  In here you should replace the "AGENT_ID" with a period ".".  In the ensuing drop down list, you should see the new variable for the agent_id.
 <br><br>
 <a class="glightbox" href="../../images/runs_api/runs_api_body_config.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="runs API body configl" src="../../images/runs_api/runs_api_body_config.png#shadow#left" style="height:500x;width:500px" /></a>
 <br><br></p>
 </li>
+<li>
+<p>Now you can send your first message to the agent.  Click Send.  If everything is working, you can see the resulting object has a thread_id.
+<br><br>
+<a class="glightbox" href="../../images/runs_api/runs_api_first_test.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="runs API first testl" src="../../images/runs_api/runs_api_first_test.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+Save the thread_id as a new environment varible. We will use it to view the messages in the thread, using the /messages API.
+<br><br>
+<a class="glightbox" href="../../images/list_messages/environment_with_thread_id.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="environment with thread_idl" src="../../images/list_messages/environment_with_thread_id.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
 </ol>
+<h2 id="get-the-messages">Get the messages</h2>
+<ol>
+<li>
+<p>Now you have successfully sent a message to the agent, we can view it using the /messages API.   Create a new HTTP request, with the following URL as shown in the diagram.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>GET {{ _.wxo_url }}/v1/orchestrate/threads/{{ _.thread_id }}/messages
+</span></code></pre></div>
+<br><br>
+<a class="glightbox" href="../../images/list_messages/get_messages_url_config.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get message URL configl" src="../../images/list_messages/get_messages_url_config.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Follow step 4 - 8 above in the ## section to configure the Auth section with a Bearer token.
+<br><br>
+<a class="glightbox" href="../../images/list_messages/get_messages_auth_config.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get message Auth configl" src="../../images/list_messages/get_messages_auth_config.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Run the command and view the messages in the thread.  You should be able to see the message you sent and the response from the Agent.
+<br><br>
+<a class="glightbox" href="../../images/list_messages/get_messages_output.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get message outputl" src="../../images/list_messages/get_messages_output.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+</ol>
+<h2 id="resources">Resources</h2>
+<p>You can find the Insomnia export of [my environment[(../insomnia/Hello-world-demo-environment_2025-08-29.yaml)] (sanitized) and <a href="../../insomnia/my_first_collection.yaml">My first Collection</a>.   </p>
+<p>Please provide feedback to jmig@us.ibm.com</p>
 
 
 
