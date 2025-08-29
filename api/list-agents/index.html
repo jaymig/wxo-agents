@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../adk/hello-world-adk/">
+        <link rel="prev" href="../api-authentication/">
       
       
-        <link rel="next" href="../../api/overview/">
+        <link rel="next" href="../chat-with-agent/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Floating panel chat - Watsonx Orchestrate Agents and Tools</title>
+        <title>List agents - Watsonx Orchestrate Agents and Tools</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#embedded-hello-world" class="md-skip">
+        <a href="#list-agents-api" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Floating panel chat
+              List agents
             
           </span>
         </div>
@@ -348,20 +348,18 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -375,12 +373,117 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Embedded examples
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../embedded/hello-world-embedded/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Floating panel chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    API examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            API examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -401,7 +504,7 @@
           
   
   <span class="md-ellipsis">
-    Floating panel chat
+    List agents
   </span>
   
 
@@ -412,7 +515,7 @@
         
   
   <span class="md-ellipsis">
-    Floating panel chat
+    List agents
   </span>
   
 
@@ -434,22 +537,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#end-result" class="md-nav__link">
-    End Result
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-by-step-instructions" class="md-nav__link">
-    Step by Step instructions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chat-with-the-agent" class="md-nav__link">
-    Chat with the Agent
+  <a href="#list-agents-step-by-step-guide" class="md-nav__link">
+    List agents - step by step guide.
   </a>
   
 </li>
@@ -463,116 +552,13 @@
 
               
             
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    API examples
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            API examples
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
               
                 
   
   
   
     <li class="md-nav__item">
-      <a href="../../api/overview/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Overview
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../api/api-authentication/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Authentication
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../api/list-agents/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    List agents
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../api/chat-with-agent/" class="md-nav__link">
+      <a href="../chat-with-agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,22 +689,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#end-result" class="md-nav__link">
-    End Result
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-by-step-instructions" class="md-nav__link">
-    Step by Step instructions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#chat-with-the-agent" class="md-nav__link">
-    Chat with the Agent
+  <a href="#list-agents-step-by-step-guide" class="md-nav__link">
+    List agents - step by step guide.
   </a>
   
 </li>
@@ -738,92 +710,76 @@
                   
 
 
-<h1 id="embedded-hello-world">Embedded Hello World</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This tutorial requires the use of the Agent Development Kit (ADK).  Installation of the ADK is outside of the scope of these tutorials.  Please see the <a href="https://developer.watson-orchestrate.ibm.com/getting_started/installing">ADK installation</a> documentation for details.</p>
-</div>
-<p>Once you have completed your first <a href="../../wxo-agents/hello-world/" target="_blank">Hello World Agent</a>,  follow the steps below to learn how to embed your agent in a simple web page. This tutorial follows these <a href="https://developer.watson-orchestrate.ibm.com/manage/channels#watsonx-orchestrate-channels-web-chat">ADK instructions</a>.</p>
-<h2 id="end-result">End Result</h2>
-<p>At the end of this tutorial, you should have a simple web page with an chat icon in the corner, that opens up a chat with your Hello World agent.</p>
-<p><br><br>
-<a class="glightbox" href="../../images/embedded_chat.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="HTML page" src="../../images/embedded_chat.png#shadow#center" style="height:300x;width:300px" /></a>
-<br><br></p>
-<h2 id="step-by-step-instructions">Step by Step instructions</h2>
-<p>The following steps guild you through creating a simple web page with an embedded "Hello World" agent.</p>
+<h1 id="list-agents-api">List agents API</h1>
+<p>In this section we will create an HTTP call with the <a href="https://developer.watson-orchestrate.ibm.com/apis/agents/list-registered-agents">/orchestrate/agents API</a> to list the existing agents in your tenant, so we can find the Agent ID.  We need the Agent ID in order to call the /runs API.  </p>
+<h2 id="list-agents-step-by-step-guide">List agents - step by step guide.</h2>
 <ol>
 <li>
-<p>Create a text file with the following content, and save it at index.html
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;HTML&gt;
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  &lt;BODY&gt;
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  &lt;/BODY&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&lt;/HTML&gt;
-</span></code></pre></div></p>
-</li>
-<li>
-<p>Find your agent name, by listing the agents
-If you only have one agent on your server, you can just list agents and you should see the name
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># orchestrate agents list
-</span></code></pre></div>
-If you have many agents, you may need verbose mode, piped to less, where you can scroll or use the "/" to search for your agent
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># orchestrate agents list -v | less
-</span></code></pre></div>
-Here you can see the details of my agent where I have highlighted the name
+<p>Create a new HTTP request, using the "+" icon at the top of your list of existing HTTP requests.  Select "New HTTP request" from the menu
 <br><br>
-<a class="glightbox" href="../../images/ADK_agent_details.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="agent details" src="../../images/ADK_agent_details.png#shadow#left" style="height:500x;width:500px" /></a>
+<a class="glightbox" href="../../images/list_agents/new_http_request.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new http request" src="../../images/list_agents/new_http_request.png#shadow#left" style="height:500x;width:500px" /></a>
 <br><br></p>
 </li>
 <li>
-<p>Use the orchestrate channels command to obtain the embed script
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># orchestrate channels webchat embed --agent-name=YOUR_AGENT_NAME
+<p>Configure the request with the _.wxo_url variable and the following path:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/v1/orchestrate/agents
 </span></code></pre></div>
-The output should look like this:
 <br><br>
-<a class="glightbox" href="../../images/adk_export_embed_script.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="agent details" src="../../images/adk_export_embed_script.png#shadow#left" style="height:500x;width:500px" /></a>
+<a class="glightbox" href="../../images/list_agents/get_agents_url.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get agent url" src="../../images/list_agents/get_agents_url.png#shadow#left" style="height:500x;width:500px" /></a>
 <br><br></p>
 </li>
 <li>
-<p>Copy that content into your index.html page in side of the <BODY></BODY> section.  The final file should look something like this:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;HTML&gt;
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    &lt;BODY&gt;
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>            &lt;script&gt;
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>                window.wxOConfiguration = {
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                    orchestrationID: &quot;20250430-1824-1871-40a1-cbba52234762&quot;,
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>                    hostURL: &quot;https://dl.watson-orchestrate.ibm.com&quot;,
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>                    rootElementID: &quot;root&quot;,
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>                    showLauncher: true,
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>                    chatOptions: {
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>                        agentId: &quot;2c356c54-e83a-4c41-a4aa-272dc788903a&quot;,
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>                        agentEnvironmentId: &quot;9d9e9ac5-1c7e-47e7-a8cd-bb1b665c206c&quot;
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>                    },
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>                };
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>                setTimeout(function () {
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>                    const script = document.createElement(&#39;script&#39;);
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>                    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>                    script.addEventListener(&#39;load&#39;, function () {
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>                    wxoLoader.init();
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>                    });
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>                    document.head.appendChild(script);
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>                }, 0);
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>            &lt;/script&gt;
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>        &lt;/BODY&gt;
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>&lt;/HTML&gt;
-</span></code></pre></div></p>
+<p>Next we will configure the token from the Token Auth API call as input to our Authorization token.  In the Token field, type a period "." and select "Request -&gt; OAuth 2.0 Access Token" from the list.
+<br><br>
+<a class="glightbox" href="../../images/list_agents/list_agents_auth_config.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select OAuth token" src="../../images/list_agents/list_agents_auth_config.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
 </li>
 <li>
-<p>Congratulations.  You finished your first embedded agent.</p>
+<p>The result is an input variable that needs to be configured.  Click on the unconfigured variable token and a configuration dialogue will appear.
+<br><br>
+<a class="glightbox" href="../../images/list_agents/list_agents_unconfigured_auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="unconfigured input" src="../../images/list_agents/list_agents_unconfigured_auth.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+Variable configuration dialogue box:
+<br><br>
+<a class="glightbox" href="../../images/edit_tag.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="edit tag" src="../../images/edit_tag.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Click on the "function to perform" and select "Response - reference values from other request's responses"
+<br><br>
+<a class="glightbox" href="../../images/edit_tags_reference_values_from_other_requests.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="reference values" src="../../images/edit_tags_reference_values_from_other_requests.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Under Attribute, select "Body Attribute - value of response body" and under Request select "POST Token Auth"
+<br><br>
+<a class="glightbox" href="../../images/edit_tag_select_token_auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure attribute" src="../../images/edit_tag_select_token_auth.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Lastly, configure the filter to fetch the "token" field from the Token Auth output.  This can be done using the syntax 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> $.token
+</span></code></pre></div>
+(which represent the token parameter from the output of the Token Auth API call, payload).  You can see the token value in the 'live Preview" box at the bottom of the screen.
+<br><br>
+<a class="glightbox" href="../../images/edit_tag_configure_filter.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure filter" src="../../images/edit_tag_configure_filter.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+Click Done to complete this configuration.  The correctly configured Auth section should look like this:
+<br><br>
+<a class="glightbox" href="../../images/list_agents/get_agents_auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get agent authl" src="../../images/list_agents/get_agents_auth.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Click the Send button and view the results, which should be your agent details.  If your tenant has multiple agents, use the CMD+F key to search for 'hello_world' and you should be able to find the Hello World agent and see it's id.
+<br><br>
+<a class="glightbox" href="../../images/list_agents/get_agents_api_call.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get agent outputl" src="../../images/list_agents/get_agents_api_call.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+Copy the Agent ID and save it to your environment.
+<br><br>
+<a class="glightbox" href="../../images/list_agents/environment_with_agent_id.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="environment with agent_idl" src="../../images/list_agents/environment_with_agent_id.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
 </li>
 </ol>
-<h2 id="chat-with-the-agent">Chat with the Agent</h2>
-<p>Now you can open the index.html file using your favorite browser, and you will see a blank page with a blue chat icon in the botton right corner, which looks like this:
-<br><br>
-<a class="glightbox" href="../../images/embedded_icon.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="agent details" src="../../images/embedded_icon.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br>
-Click on the blue icon and you will see the chat bot appear.
-<br><br>
-<a class="glightbox" href="../../images/embedded_chat_open.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="agent details" src="../../images/embedded_chat_open.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
 
 
 

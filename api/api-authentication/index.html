@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../embedded/hello-world-embedded/">
+        <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../../resources/resources/">
+        <link rel="next" href="../list-agents/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Chat via API - Watsonx Orchestrate Agents and Tools</title>
+        <title>Authentication - Watsonx Orchestrate Agents and Tools</title>
       
     
     
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chat via API
+              Authentication
             
           </span>
         </div>
@@ -449,6 +449,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -464,7 +484,7 @@
           
   
   <span class="md-ellipsis">
-    Chat via API
+    Authentication
   </span>
   
 
@@ -475,7 +495,7 @@
         
   
   <span class="md-ellipsis">
-    Chat via API
+    Authentication
   </span>
   
 
@@ -497,13 +517,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
-    Objective
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#authenticating-with-your-tenant" class="md-nav__link">
     Authenticating with your tenant
   </a>
@@ -511,36 +524,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chat-with-the-agent-via-runs-api" class="md-nav__link">
-    Chat with the Agent via /runs API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-the-agent-id" class="md-nav__link">
-    Get the Agent ID
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#send-a-message-to-the-agent" class="md-nav__link">
-    Send a message to the Agent
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-the-messages" class="md-nav__link">
-    Get the messages
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
+  <a href="#finding-the-agent-id-via-agents-api" class="md-nav__link">
+    Finding the Agent ID via /agents API
   </a>
   
 </li>
@@ -549,6 +534,46 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../list-agents/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    List agents
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-with-agent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chat with agent
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -671,13 +696,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#objective" class="md-nav__link">
-    Objective
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#authenticating-with-your-tenant" class="md-nav__link">
     Authenticating with your tenant
   </a>
@@ -685,36 +703,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chat-with-the-agent-via-runs-api" class="md-nav__link">
-    Chat with the Agent via /runs API
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-the-agent-id" class="md-nav__link">
-    Get the Agent ID
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#send-a-message-to-the-agent" class="md-nav__link">
-    Send a message to the Agent
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#get-the-messages" class="md-nav__link">
-    Get the messages
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    Resources
+  <a href="#finding-the-agent-id-via-agents-api" class="md-nav__link">
+    Finding the Agent ID via /agents API
   </a>
   
 </li>
@@ -735,13 +725,6 @@
 
 
 <h1 id="hello-world-api">Hello World API</h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This tutorial ruses the Insomnia HTTP client to interact with the Watsonx Orchestrate APIs.  You can download Insomnia from <a href="https://insomnia.rest/download">the Insomnia web site.</a>.</p>
-</div>
-<p>Once you have completed your first <a href="../../wxo-agents/hello-world/" target="_blank">Hello World Agent</a>, follow the instructions to interact with your agent using the APIs. This tutorial assumes that you have installed the agent on a SaaS tenant. </p>
-<h2 id="objective">Objective</h2>
-<p>At the end of this tutorial, you should have sent a message to the agent using the <a href="https://developer.watson-orchestrate.ibm.com/apis/orchestrate-agent/chat-with-orchestrate-assistant">/runs api</a> and viewed the new messages using the <a href="https://developer.watson-orchestrate.ibm.com/apis/message-threads/get-message-by-id">/messages api</a>.  You will see the message detail in the the Insomnia client as well as in your browser.</p>
 <h2 id="authenticating-with-your-tenant">Authenticating with your tenant</h2>
 <p>The following steps guild you through how to fetch an authentication token required to interact with the APIs.  If this is your first time using Insomnia, I reccomend you create a new Project where we sill create HTTP calls, and also an environment where we will store API keys, and other end point information.</p>
 <ol>
@@ -846,164 +829,9 @@ Here you can see what the correctly configured body looks like, with the variabl
 <br><br></p>
 </li>
 </ol>
-<p>Congratulation!  You are now ready to use the /runs API</p>
-<h2 id="chat-with-the-agent-via-runs-api">Chat with the Agent via /runs API</h2>
-<p>Now that you have an auth token, we will use that token to authenticate using the /runs api, which will send a message to the agent, and we should see a response from the agent.  </p>
-<ol>
-<li>
-<p>First we need to create a new request.  By closing all the existing tabs, you should see an empty canvas with an icon to create a new HTTP request.
-<br><br>
-<a class="glightbox" href="../../images/create_new_HTTP_request.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new HTTP request" src="../../images/create_new_HTTP_request.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Next we can populate the URL using the same technique as we did above, select POST method from the drop down list, and then type a period "." and select _.wxo_url from the list.  Then append this to your host:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/v1/orchestrate/runs
-</span></code></pre></div>
-Here is a view of the completed URL configuration
-<br><br>
-<a class="glightbox" href="../../images/orchestrate_runs_api_request.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new HTTP request" src="../../images/orchestrate_runs_api_request.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Navigate to the Auth tab, and select 'Bearer' from the drop down list.
-<br><br>
-<a class="glightbox" href="../../images/orchestrate_runs_auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select Bearer" src="../../images/orchestrate_runs_auth.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Next we will configure the token from the Token Auth API call as input to our Authorization token.  In the Token field, type a period "." and select "Request -&gt; OAuth 2.0 Access Token" from the list.
-<br><br>
-<a class="glightbox" href="../../images/orchestrate_runs_auth_config.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select OAuth token" src="../../images/orchestrate_runs_auth_config.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>The result is an input variable that needs to be configured.  Click on the unconfigured variable token and a configuration dialogue will appear.
-<br><br>
-<a class="glightbox" href="../../images/unconfigured_token_input.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="unconfigured input" src="../../images/unconfigured_token_input.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br>
-Variable configuration dialogue box:
-<br><br>
-<a class="glightbox" href="../../images/edit_tag.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="edit tag" src="../../images/edit_tag.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Click on the "function to perform" and select "Response - reference values from other request's responses"
-<br><br>
-<a class="glightbox" href="../../images/edit_tags_reference_values_from_other_requests.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="reference values" src="../../images/edit_tags_reference_values_from_other_requests.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Under Attribute, select "Body Attribute - value of response body" and under Request select "POST Token Auth"
-<br><br>
-<a class="glightbox" href="../../images/edit_tag_select_token_auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure attribute" src="../../images/edit_tag_select_token_auth.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Lastly, configure the filter to fetch the "token" field from the Token Auth output.  This can be done using the syntax 
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> $.token
-</span></code></pre></div>
-(which represent the token parameter from the output of the Token Auth API call, payload).  You can see the token value in the 'live Preview" box at the bottom of the screen.
-<br><br>
-<a class="glightbox" href="../../images/edit_tag_configure_filter.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure filter" src="../../images/edit_tag_configure_filter.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br>
-Click Done to complete this configuration.  The correctly configured Auth section should look like this:
-<br><br>
-<a class="glightbox" href="../../images/runs_api_auth_configured.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure filter" src="../../images/runs_api_auth_configured.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Now we need to configure the body section.  Navigate to the body section and end the following text:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&quot;message&quot;:{
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    &quot;role&quot;:&quot;user&quot;,
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    &quot;content&quot;:&quot;Hello, How are you?&quot;
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   },
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>&quot;agent_id&quot;:&quot;AGENT_ID&quot;
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>}
-</span></code></pre></div>
-Note how I have a placeholder for the Agent ID.  In the next section, we will configure an HTTP call to fetch the Agent ID.  For now, save this HTTP call under the name "Runs API"</p>
-</li>
-</ol>
-<h2 id="get-the-agent-id">Get the Agent ID</h2>
-<p>We need the Agent ID in order to call the /runs API.  In this section we will create an HTTP call to fetch the Agent ID.</p>
-<ol>
-<li>
-<p>Create a new HTTP request, using the "+" icon at the top of your list of existing HTTP requests.  Select "New HTTP request" from the menu
-<br><br>
-<a class="glightbox" href="../../images/get_agent_id/new_http_request.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new http request" src="../../images/get_agent_id/new_http_request.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Configure the request with the _.wxo_url variable and the following path:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/v1/orchestrate/agents
-</span></code></pre></div>
-<br><br>
-<a class="glightbox" href="../../images/get_agent_id/get_agents_url.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get agent url" src="../../images/get_agent_id/get_agents_url.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Configure the HTTP request Auth with the bearer token using the identical setup as shown in steps 4 - 8 above.
-<br><br>
-<a class="glightbox" href="../../images/get_agent_id/get_agents_auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get agent authl" src="../../images/get_agent_id/get_agents_auth.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Click the Send button and view the results, which should be your agent details.  If your tenant has multiple agents, use the CMD+F key to search for 'hello_world' and you should be able to find the Hello World agent and see it's id.
-<br><br>
-<a class="glightbox" href="../../images/get_agent_id/get_agents_api_call.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get agent outputl" src="../../images/get_agent_id/get_agents_api_call.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br>
-Copy the Agent ID and save it to your environment.
-<br><br>
-<a class="glightbox" href="../../images/get_agent_id/environment_with_agent_id.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="environment with agent_idl" src="../../images/get_agent_id/environment_with_agent_id.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-</ol>
-<h2 id="send-a-message-to-the-agent">Send a message to the Agent</h2>
-<ol>
-<li>
-<p>Now that we have the Agent ID, we can use it in the /runs API call.  Navigate back to the Runs API configuration screens, select the body tab.  In here you should replace the "AGENT_ID" with a period ".".  In the ensuing drop down list, you should see the new variable for the agent_id.
-<br><br>
-<a class="glightbox" href="../../images/runs_api/runs_api_body_config.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="runs API body configl" src="../../images/runs_api/runs_api_body_config.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Now you can send your first message to the agent.  Click Send.  If everything is working, you can see the resulting object has a thread_id.
-<br><br>
-<a class="glightbox" href="../../images/runs_api/runs_api_first_test.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="runs API first testl" src="../../images/runs_api/runs_api_first_test.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br>
-Save the thread_id as a new environment varible. We will use it to view the messages in the thread, using the /messages API.
-<br><br>
-<a class="glightbox" href="../../images/list_messages/environment_with_thread_id.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="environment with thread_idl" src="../../images/list_messages/environment_with_thread_id.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-</ol>
-<h2 id="get-the-messages">Get the messages</h2>
-<ol>
-<li>
-<p>Now you have successfully sent a message to the agent, we can view it using the /messages API.   Create a new HTTP request, with the following URL as shown in the diagram.
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>GET {{ _.wxo_url }}/v1/orchestrate/threads/{{ _.thread_id }}/messages
-</span></code></pre></div>
-<br><br>
-<a class="glightbox" href="../../images/list_messages/get_messages_url_config.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get message URL configl" src="../../images/list_messages/get_messages_url_config.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Follow step 4 - 8 above in the ## section to configure the Auth section with a Bearer token.
-<br><br>
-<a class="glightbox" href="../../images/list_messages/get_messages_auth_config.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get message Auth configl" src="../../images/list_messages/get_messages_auth_config.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-<li>
-<p>Run the command and view the messages in the thread.  You should be able to see the message you sent and the response from the Agent.
-<br><br>
-<a class="glightbox" href="../../images/list_messages/get_messages_output.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get message outputl" src="../../images/list_messages/get_messages_output.png#shadow#left" style="height:500x;width:500px" /></a>
-<br><br></p>
-</li>
-</ol>
-<h2 id="resources">Resources</h2>
-<p>You can find the Insomnia export of <a href="../../insomnia/Hello-world-demo-environment_2025-08-29.yaml">my environment</a> (sanitized) and <a href="../../insomnia/my_first_collection.yaml">My first Collection</a>.   </p>
-<p>Please provide feedback to jmig@us.ibm.com</p>
+<p>Congratulation!  You are now ready to find your agent ID using the /agents API</p>
+<h2 id="finding-the-agent-id-via-agents-api">Finding the Agent ID via /agents API</h2>
+<p>Ready for the next step?  Click <a href="../list-agents/">here to list your agents</a>.</p>
 
 
 
