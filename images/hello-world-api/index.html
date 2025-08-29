@@ -1,0 +1,685 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>Hello World API - Watsonx Orchestrate Agents and Tools</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hello-world-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Watsonx Orchestrate Agents and Tools" class="md-header__button md-logo" aria-label="Watsonx Orchestrate Agents and Tools" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Watsonx Orchestrate Agents and Tools
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Hello World API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Watsonx Orchestrate Agents and Tools" class="md-nav__button md-logo" aria-label="Watsonx Orchestrate Agents and Tools" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Watsonx Orchestrate Agents and Tools
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wxo-agents/hello-world/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Agent examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Agent examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wxo-agents/department-contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Department Contact Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ADK examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ADK examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adk/getting-started-adk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started with ADK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../adk/hello-world-adk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World Agent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Embedded examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Embedded examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../embedded/hello-world-embedded/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Floating panel chat
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Appendix
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Appendix
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Article todo list
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    Objective
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authenticating-with-your-tenant" class="md-nav__link">
+    Authenticating with your tenant
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chat-with-the-agent-via-api" class="md-nav__link">
+    Chat with the Agent via API
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="hello-world-api">Hello World API</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tutorial ruses the Insomnia HTTP client to interact with the Watsonx Orchestrate APIs.  You can download Insomnia from <a href="https://insomnia.rest/download">the Insomnia web site.</a>.</p>
+</div>
+<p>Once you have completed your first <a href="../../wxo-agents/hello-world/" target="_blank">Hello World Agent</a>, follow the instructions to interact with your agent using the APIs. This tutorial assumes that you have installed the agent on a SaaS tenant. </p>
+<h2 id="objective">Objective</h2>
+<p>At the end of this tutorial, you should have sent a message to the agent using the <a href="https://developer.watson-orchestrate.ibm.com/apis/orchestrate-agent/chat-with-orchestrate-assistant">/runs api</a> and viewed the new messages using the <a href="https://developer.watson-orchestrate.ibm.com/apis/message-threads/get-message-by-id">/messages api</a>.  You will see the message detail in the the Insomnia client as well as in your browser.</p>
+<h2 id="authenticating-with-your-tenant">Authenticating with your tenant</h2>
+<p>The following steps guild you through how to fetch an authentication token required to interact with the APIs.  If this is your first time using Insomnia, I reccomend you create a new Project where we sill create HTTP calls, and also an environment where we will store API keys, and other end point information.</p>
+<ol>
+<li>
+<p>Click on the "+" icon in the upper right hand corner of Insomnia to create a new project, and give the project a name.
+<br><br>
+<a class="glightbox" href="../images/insomnia_new_project.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="create project" src="../images/insomnia_new_project.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+<br><br>
+<a class="glightbox" href="../hello_world_insomnia_project.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new project name" src="../hello_world_insomnia_project.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Create a new Environment by clicking on the "+" icon to the rigth of the Environments label.  Give your new environment a name.
+<br><br>
+<a class="glightbox" href="../create_new_environment.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="create project" src="../create_new_environment.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+<br><br>
+<a class="glightbox" href="../hello_world_demo_environment.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new project name" src="../hello_world_demo_environment.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Navigate into your enviornment by clicking on it, and then add your first environment variable "auth_url".  The url for generating auth tokens is <a href="https://developer.ibm.com/apis/catalog/watsonorchestrate--custom-assistants/api/API--watsonorchestrate--generating-a-json-web-token#generatingjwt">documented here</a>.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://iam.platform.saas.ibm.com/siusermgr/api/1.0/apikeys/token
+</span></code></pre></div>
+Your environment should look like this:
+<br><br>
+<a class="glightbox" href="../images/auth_url_environment.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="auth url" src="../images/auth_url_environment.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Next we need to add two more enviornment variables:  API key and tenant URL.  The API key and tenant url can be found in the settings menu of your watsonx Orchstrate tenant.
+<br><br>
+<a class="glightbox" href="../images/settings_menu.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="settings menu" src="../images/settings_menu.png#shadow#left" style="height:300x;width:300px" /></a>
+<br><br>
+<br><br>
+<a class="glightbox" href="../images/url_and_API_key.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="url and api key" src="../images/url_and_API_key.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+Here is a view of the configured environment
+<br><br>
+<a class="glightbox" href="../images/environment_with_api_key_and_urls.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configured environment" src="../images/environment_with_api_key_and_urls.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+You can now exit the enviornment by clicking on the X in the tab, and then open up your collection by clicking on Collection, as shown in the screenshots:
+<br><br>
+<a class="glightbox" href="../images/exit_environment.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="exit environment" src="../images/exit_environment.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+<br><br>
+<a class="glightbox" href="../click_on_collections.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="open collections" src="../click_on_collections.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Now we will configure an API call to generate a token.  This API is documented <a href="https://developer.ibm.com/apis/catalog/watsonorchestrate--custom-assistants/api/API--watsonorchestrate--generating-a-json-web-token#generatingjwt">here</a>.  Start by opening up your collection by clicking on it.
+<br><br>
+<a class="glightbox" href="../images/open_my_first_collection.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="open my collections" src="../images/open_my_first_collection.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Select your environment, so the API call can use your variables.  In the top left of Insomnia, click on Global Settings drop down menu and select the "Hello World Demo Environment".
+<br><br>
+<a class="glightbox" href="../images/select_hello_world_environment.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select environment" src="../images/select_hello_world_environment.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>You should be prompted to create your first HTTP API call.  Since this is a POST, you need to select POST from the drop down list.
+<br><br>
+<a class="glightbox" href="../configure_http_post.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select POST" src="../configure_http_post.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Now we will insert the variable for the URL.  By typeing a period "." in the URL box, a list of available variables will appear.  Select the _.auth_url from the list.<br />
+<br><br>
+<a class="glightbox" href="../images/insert_auth_url.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select POST" src="../images/insert_auth_url.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+Here you can see what the correctly configured URL field should look like.  Note how the preview field below shows the actual URL using the value of the variables
+<br><br>
+<a class="glightbox" href="../configured_url.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select POST" src="../configured_url.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+</ol>
+<h2 id="chat-with-the-agent-via-api">Chat with the Agent via API</h2>
+<p>Now that you have an auth token, we will use that token to authenticate using the /runs api, which will send a message to the agent, and prompt the agent to respond.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
