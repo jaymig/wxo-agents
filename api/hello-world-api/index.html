@@ -517,6 +517,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#get-the-agent-id" class="md-nav__link">
+    Get the Agent ID
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -659,6 +666,13 @@
         <li class="md-nav__item">
   <a href="#chat-with-the-agent-via-runs-api" class="md-nav__link">
     Chat with the Agent via /runs API
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-the-agent-id" class="md-nav__link">
+    Get the Agent ID
   </a>
   
 </li>
@@ -829,6 +843,83 @@ Here is a view of the completed URL configuration
 Variable configuration dialogue box:
 <br><br>
 <a class="glightbox" href="../../images/edit_tag.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="edit tag" src="../../images/edit_tag.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Click on the "function to perform" and select "Response - reference values from other request's responses"
+<br><br>
+<a class="glightbox" href="../../images/edit_tags_reference_values_from_other_requests.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="reference values" src="../../images/edit_tags_reference_values_from_other_requests.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Under Attribute, select "Body Attribute - value of response body" and under Request select "POST Token Auth"
+<br><br>
+<a class="glightbox" href="../../images/edit_tag_select_token_auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure attribute" src="../../images/edit_tag_select_token_auth.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Lastly, configure the filter to fetch the "token" field from the Token Auth output.  This can be done using the syntax 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> $.token
+</span></code></pre></div>
+(which represent the token parameter from the output of the Token Auth API call, payload).  You can see the token value in the 'live Preview" box at the bottom of the screen.
+<br><br>
+<a class="glightbox" href="../../images/edit_tag_configure_filter.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure filter" src="../../images/edit_tag_configure_filter.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+Click Done to complete this configuration.  The correctly configured Auth section should look like this:
+<br><br>
+<a class="glightbox" href="../../images/runs_api_auth_configured.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure filter" src="../../images/runs_api_auth_configured.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Now we need to configure the body section.  Navigate to the body section and end the following text:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&quot;message&quot;:{
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    &quot;role&quot;:&quot;user&quot;,
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    &quot;content&quot;:&quot;Hello, How are you?&quot;
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   },
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>&quot;agent_id&quot;:&quot;AGENT_ID&quot;
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>}
+</span></code></pre></div>
+Note how I have a placeholder for the Agent ID.  In the next section, we will configure an HTTP call to fetch the Agent ID.  For now, save this HTTP call under the name "Runs API"</p>
+</li>
+</ol>
+<h2 id="get-the-agent-id">Get the Agent ID</h2>
+<p>We need the Agent ID in order to call the /runs API.  In this section we will create an HTTP call to fetch the Agent ID.</p>
+<ol>
+<li>
+<p>Create a new HTTP request, using the "+" icon at the top of your list of existing HTTP requests.  Select "New HTTP request" from the menu
+<br><br>
+<a class="glightbox" href="../../images/get_agent_id/new_http_request.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new http request" src="../../images/get_agent_id/new_http_request.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Configure the request with the _.wxo_url variable and the following path:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/v1/orchestrate/agents
+</span></code></pre></div>
+<br><br>
+<a class="glightbox" href="../../images/get_agent_id/get_agents_url.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get agent url" src="../../images/get_agent_id/get_agents_url.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Configure the HTTP request Auth with the bearer token using the identical setup as shown in steps 4 - 8 above.
+<br><br>
+<a class="glightbox" href="../../images/get_agent_id/get_agents_auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get agent authl" src="../../images/get_agent_id/get_agents_auth.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Click the Send button and view the results, which should be your agent details.  If your tenant has multiple agents, use the CMD+F key to search for 'hello_world' and you should be able to find the Hello World agent and see it's id.
+<br><br>
+<a class="glightbox" href="../../images/get_agent_id/get_agents_api_call.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="get agent outputl" src="../../images/get_agent_id/get_agents_api_call.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+Copy the Agent ID and save it to your environment.
+<br><br>
+<a class="glightbox" href="../../images/get_agent_id/environment_with_agent_id.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="environment with agent_idl" src="../../images/get_agent_id/environment_with_agent_id.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Now that we have the Agent ID, we can use it in the /runs API call.  Navigate back to the Runs API configuration screens, select the body tab.  In here you should replace the "AGENT_ID" with a period ".".  In the ensuing drop down list, you should see the new variable for the agent_id.
+<br><br>
+<a class="glightbox" href="../../images/runs_api/runs_api_body_config.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="runs API body configl" src="../../images/runs_api/runs_api_body_config.png#shadow#left" style="height:500x;width:500px" /></a>
 <br><br></p>
 </li>
 </ol>
