@@ -511,8 +511,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chat-with-the-agent-via-api" class="md-nav__link">
-    Chat with the Agent via API
+  <a href="#chat-with-the-agent-via-runs-api" class="md-nav__link">
+    Chat with the Agent via /runs API
   </a>
   
 </li>
@@ -657,8 +657,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chat-with-the-agent-via-api" class="md-nav__link">
-    Chat with the Agent via API
+  <a href="#chat-with-the-agent-via-runs-api" class="md-nav__link">
+    Chat with the Agent via /runs API
   </a>
   
 </li>
@@ -743,7 +743,7 @@ You can now exit the enviornment by clicking on the X in the tab, and then open 
 <br><br></p>
 </li>
 <li>
-<p>Select your environment, so the API call can use your variables.  In the top left of Insomnia, click on Global Settings drop down menu and select the "Hello World Demo Environment".
+<p>Select your environment, so the API call can use the variables you just created.  In the top left of Insomnia, click on Global Settings drop down menu and select the "Hello World Demo Environment".
 <br><br>
 <a class="glightbox" href="../../images/select_hello_world_environment.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select environment" src="../../images/select_hello_world_environment.png#shadow#left" style="height:500x;width:500px" /></a>
 <br><br></p>
@@ -764,9 +764,58 @@ Here you can see what the correctly configured URL field should look like.  Note
 <a class="glightbox" href="../../images/configured_url.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select POST" src="../../images/configured_url.png#shadow#left" style="height:500x;width:500px" /></a>
 <br><br></p>
 </li>
+<li>
+<p>Now we will configure the body of the HTTP call to include the API Key. In the body section, type
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{&quot;apikey&quot;: &quot;&quot;}
+</span></code></pre></div>
+Then insert a "." for the value of the API key, and a drop down list will appear with the available variables.  Select _.api_key from the list.
+<br><br>
+<a class="glightbox" href="../../images/configure_api_key.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configure key" src="../../images/configure_api_key.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br>
+Here you can see what the correctly configured body looks like, with the variable as a placeholder for the value of the API key. 
+<br><br>
+<a class="glightbox" href="../../images/configured_body.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configured body" src="../../images/configured_body.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Now you are ready to test.  Click the SEND button. You should see a response payload that includes the token.
+<br><br>
+<a class="glightbox" href="../../images/send_success.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="send_success" src="../../images/send_success.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>To prevent confusion with other HTTP requests, let's rename this first HTTP call to "Token Auth", by clicking on the settings menu option and updating the name.
+<br><br>
+<a class="glightbox" href="../../images/rename_to_token_Auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="rename token auth" src="../../images/rename_to_token_Auth.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
 </ol>
-<h2 id="chat-with-the-agent-via-api">Chat with the Agent via API</h2>
-<p>Now that you have an auth token, we will use that token to authenticate using the /runs api, which will send a message to the agent, and prompt the agent to respond.</p>
+<p>Congratulation!  You are now ready to use the /runs API</p>
+<h2 id="chat-with-the-agent-via-runs-api">Chat with the Agent via /runs API</h2>
+<p>Now that you have an auth token, we will use that token to authenticate using the /runs api, which will send a message to the agent, and we should see a response from the agent.  </p>
+<ol>
+<li>
+<p>First we need to create a new request.  By closing all the existing tabs, you should see an empty canvas with an icon to create a new HTTP request.
+<br><br>
+<a class="glightbox" href="../../images/create_new_HTTP_request.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new HTTP request" src="../../images/create_new_HTTP_request.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Next we can populate the URL using the same technique as we did above, select POST method from the drop down list, and then type a period "." and select _.wxo_url from the list.  Then append this to your host:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/v1/orchestrate/runs
+</span></code></pre></div>
+Here is a view of the completed URL configuration
+<br><br>
+<a class="glightbox" href="../../images/orchestrate_runs_api_request.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="new HTTP request" src="../../images/orchestrate_runs_api_request.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+<li>
+<p>Navigate to the Auth tab, and select 'Bearer' from the drop down list.
+<br><br>
+<a class="glightbox" href="../../images/orchestrate_runs_auth.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="select Bearer" src="../../images/orchestrate_runs_auth.png#shadow#left" style="height:500x;width:500px" /></a>
+<br><br></p>
+</li>
+</ol>
 
 
 
