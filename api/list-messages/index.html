@@ -636,8 +636,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#get-the-messages" class="md-nav__link">
-    Get the messages
+  <a href="#objective" class="md-nav__link">
+    Objective
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-the-messages-step-by-step" class="md-nav__link">
+    Get the messages - Step by Step
   </a>
   
 </li>
@@ -665,10 +672,12 @@
 
 
 <h1 id="chat-with-hello-world-agent">Chat with Hello World Agent</h1>
-<h2 id="get-the-messages">Get the messages</h2>
+<h2 id="objective">Objective</h2>
+<p>In this tutorial, we will configure Insomnia HTTP client to query the /message API to get message details.</p>
+<h2 id="get-the-messages-step-by-step">Get the messages - Step by Step</h2>
 <ol>
 <li>
-<p>Now you have successfully sent a message to the agent, we can view it using the /messages API.   Create a new HTTP request, with the following URL as shown in the diagram.
+<p>Create a new HTTP request, with the following URL as shown in the diagram.
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>GET {{ _.wxo_url }}/v1/orchestrate/threads/{{ _.thread_id }}/messages
 </span></code></pre></div>
 <br><br>
