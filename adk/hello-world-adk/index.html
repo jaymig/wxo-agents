@@ -626,6 +626,26 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/setting_context/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Context
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -795,41 +815,38 @@
 <ol>
 <li>
 <p>Login to your terminal and navigate to the folder "demo" folder on your desktop.
-<br><br>
-<a class="glightbox" href="../../images/cd_to_demo_folder.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="cd to demo" src="../../images/cd_to_demo_folder.png#shadow#left" style="height:200x;width:200px" /></a>
-<br><br></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a># cd ~/Desktop/demo
+</span></code></pre></div>
+<br></p>
 </li>
 <li>
 <p>From the demo folder, import the hello-world-tool.json that you downloaded previously.
-<br><br>
-<a class="glightbox" href="../../images/import_hello-world-tool.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Import tool" src="../../images/import_hello-world-tool.png#shadow#left" style="height:600x;width:600px" /></a>
-<br><br></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># orchestrate tools import -k openapi -f ./hello-world-tool.json
+</span></code></pre></div>
+<br></p>
 </li>
 <li>
 <p>(Optional) List the tools on your tenant. 
-<br><br>
-<a class="glightbox" href="../../images/list_tools.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="List tools" src="../../images/list_tools.png#shadow#left" style="height:200x;width:200px" /></a>
-<br><br>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># orchestrate tools list
+</span></code></pre></div>
 NOTE: If you have alot of tools or you want to look at the details of the tools, try the 'verbose' mode and pipe the output to 'less'.  Use your arrow keys to scroll up and down, and 'q' to quit.
-<br><br>
-<a class="glightbox" href="../../images/list_tools_verbose.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="List tools verbos" src="../../images/list_tools_verbose.png#shadow#left" style="height:200x;width:300px" /></a>
-<br><br></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># orchestrate tools list -v | less
+</span></code></pre></div>
+<br></p>
 </li>
 <li>
 <p>Import the agent file that should be in your demo folder. 
-<br> <br />
-<a class="glightbox" href="../../images/import_hello_agent.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Import agent file" src="../../images/import_hello_agent.png#shadow#left" style="height:400x;width:450px" /></a>
-<br><br></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># orchestrate agents import -f ./hello-agent.json
+</span></code></pre></div>
+<br></p>
 </li>
 <li>
 <p>(Optional) List the agents in your tenant. 
-<br><br>
-<a class="glightbox" href="../../images/list_agents.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="List agents" src="../../images/list_agents.png#shadow#left" style="height:400x;width:200px" /></a>
-<br><br>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># orchestrate agents list
+</span></code></pre></div>
 NOTE: If you have alot of agents or you want to look at the details of the agents, try the 'verbose' mode and pipe the output to 'less'.  Use your arrow keys to scroll up and down, and 'q' to quit.
-<br><br>
-<a class="glightbox" href="../../images/list_agents_verbose.png#shadow#left" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="List agents" src="../../images/list_agents_verbose.png#shadow#left" style="height:400x;width:300px" /></a>
-<br><br></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># orchestrate agents list -v | less
+</span></code></pre></div></p>
 </li>
 </ol>
 <h2 id="chat-with-the-agent">Chat with the Agent</h2>
