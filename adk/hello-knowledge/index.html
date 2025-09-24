@@ -806,24 +806,26 @@
 <h2 id="import-the-knowledge">Import the knowledge</h2>
 <ol>
 <li>
-<p>Download the example knowledge configuration file is located <a href="../../examples/hello-world/knowledge/knowledge-base.json">here</a> into your 'demo' folder.</p>
+<p>Download the example knowledge configuration file is located <a href="../../examples/hello-world/knowledge/knowledge-base.json">here</a> into your 'demo' folder.
+<br></p>
 </li>
 <li>
-<p>Import this knowledge file using the below command line</p>
-</li>
-</ol>
-<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>orchestrate knowledge-bases import -f ./knowledge-base.json
+<p>Import this knowledge file using the below command line
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>orchestrate knowledge-bases import -f ./knowledge-base.json
 </span></code></pre></div>
-NOTE: It is important that the "IBM watsonx Orchestrate Doc.pdf" PDF file is in the same directory as the knowledge base configuration.</p>
-<p>You should see an output as follows:
+NOTE: It is important that the "IBM watsonx Orchestrate Doc.pdf" PDF file is in the same directory as the knowledge base configuration.
+<br>
+You should see an output as follows:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[INFO] - Successfully imported knowledge base &#39;knowledge_base_for_agent_Hello_world&#39;
-</span></code></pre></div></p>
-<ol>
+</span></code></pre></div>
+<br></p>
+</li>
 <li>Confirm that the knowledge base was installed by listing the existing knowledge bases
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>orchestrate knowledge-bases list
-</span></code></pre></div></li>
+</span></code></pre></div>
+<br>
+If you see a knowledge base with the name 'knowledge_base_for_agent_Hello_world', congratulations.   It is time to update your agent to point to this new knowledgebase.</li>
 </ol>
-<p>If you see a knowledge base with the name 'knowledge_base_for_agent_Hello_world', congratulations.   It is time to update your agent to point to this new knowledgebase.</p>
 <h2 id="re-import-the-agent">Re-import the agent</h2>
 <p>The following steps guild you through updating the "Hello World" agent with the new configuration.   We will simply import the agent with the new configuration file.</p>
 <ol>
@@ -833,13 +835,14 @@ NOTE: It is important that the "IBM watsonx Orchestrate Doc.pdf" PDF file is in 
 <li>
 <p>Import the agent configuration file with the following command
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>orchestrate agents import -f ./hello-agent-with-knowledge.json
-</span></code></pre></div></p>
-</li>
-</ol>
-<p>If you are updating an existing agent (e.g. the one you just imported in the previous tutorial), you should see the following message:
+</span></code></pre></div>
+<br>
+If you are updating an existing agent (e.g. the one you just imported in the previous tutorial), you should see the following message:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>[INFO] - Existing Agent &#39;hello_agent&#39; found. Updating...
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>[INFO] - Agent &#39;hello_agent&#39; updated successfully
 </span></code></pre></div></p>
+</li>
+</ol>
 <p>Congratulations!  Your agent is updated with knowledge.  You can verify that it works by logging into Watsonx Orchestrate and chatting with it.</p>
 <h2 id="chat-with-the-agent">Chat with the Agent</h2>
 <p>Now that you have built the agent, you can interact with it right there in the builder experience.  Try typing "How do I work with Agents" and see that the response comes from the knowledge file you just uploaded.</p>
