@@ -27,14 +27,21 @@ Context Collaborator Agent - an agent that has access to the same context as sup
  The collaborator agent has the following tool:
 
 - context_from_session
-   - Input:  <read from context>
+   - Input:  read from context
    - Output:
-        f"Hello, {wxo_user_name}! "
+  
+        f"Hello, {wxo_user_name}! " 
+  
         f"Employee ID: {employee_id}, "
+
         f"Employee First Name: {employee_first_name}, "
+     
         f"Employee Last Name: {employee_last_name}, "
+     
         f"Role: {role}, "
+     
         f"Country: {country}, "
+     
         f"Preferred Language: {preferred_language}"
 
 
