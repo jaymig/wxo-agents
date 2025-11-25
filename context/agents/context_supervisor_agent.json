@@ -17,10 +17,11 @@
         "employee_first_name", 
         "employee_last_name",
         "role", 
-	     "office_location", 
-	     "country", 
-	     "preferred_language",
-        "wxo_user_name"
+	    "office_location", 
+	    "country", 
+	    "preferred_language",
+        "wxo_user_name",
+		"wxo_email_id"
     ]
 }
   
