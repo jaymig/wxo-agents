@@ -9,15 +9,15 @@ This example is a ficticious insurance company SageLife.  Additional details are
 
 ## Agent Concepts
 
-Context Supervisor Agent - an agent that has access to a few context variables
-   "employee_id", 
-   "employee_first_name", 
-   "employee_last_name",
-   "role", 
-   "office_location", 
-   "country", 
-   "preferred_language",
-   "wxo_user_name"
+Context Supervisor Agent - an agent that has access to a few context variables: 
+   - "employee_id", 
+   - "employee_first_name", 
+   - "employee_last_name",
+   - "role", 
+   - "office_location", 
+   - "country", 
+   - "preferred_language",
+   - "wxo_user_name"
 
 Context Collaborator Agent - an agent that has access to the same context as supervisor as well as a tool to display the context
 
