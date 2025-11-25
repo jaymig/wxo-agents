@@ -1,0 +1,26 @@
+ {
+    "spec_version": "v1",	
+    "kind": "native",
+    "display_name": "Context Supervisor Agent",
+    "name": "context_supervisor_agent",
+    "description": "Agent that can help demonstrate the concept of context variables",
+    "llm": "watsonx/meta-llama/llama-3-2-90b-vision-instruct",
+    "style": "default",
+    "instructions": "You are an expert in tool calling, setting context variables and displaying context variables. You have access to employee_first_name: {employee_first_name}, employee_id: {employee_id}, employee_last_name: {employee_last_name}, role: {role}, office_location: {office_location},country: {country}, preferred_language: {preferred_language}, wxo_user_name: {wxo_user_name}, wxo_email_id: {wxo_email_id}", 
+    "tools": [ ],
+     "context_access_enabled": true,
+     "collaborators": [
+        "context_collaborator_agent"
+     ],
+     "context_variables": [
+        "employee_id", 
+        "employee_first_name", 
+        "employee_last_name",
+        "role", 
+	     "office_location", 
+	     "country", 
+	     "preferred_language",
+        "wxo_user_name"
+    ]
+}
+  
