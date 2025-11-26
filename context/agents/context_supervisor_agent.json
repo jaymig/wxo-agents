@@ -8,6 +8,20 @@
     "style": "default",
     "instructions": "You are an expert in tool calling, setting context variables and displaying context variables. You have access to employee_first_name: {employee_first_name}, employee_id: {employee_id}, employee_last_name: {employee_last_name}, role: {role}, office_location: {office_location},country: {country}, preferred_language: {preferred_language}, wxo_user_name: {wxo_user_name}, wxo_email_id: {wxo_email_id}", 
     "tools": [ ],
+	"welcome_content": {
+        "welcome_message": "Hello, I'm the Context Supervisor Agent",
+        "description": "Would you like to see my context?"
+    },
+	"starter_prompts": {
+        "prompts": [
+            {
+                "id": "default_01",
+                "title": "Display context variables",
+                "subtitle": "",
+                "prompt": "Ask the collaborator agent to show me the context variables"
+            }
+        ]
+    }
      "context_access_enabled": true,
      "collaborators": [
         "context_collaborator_agent"
