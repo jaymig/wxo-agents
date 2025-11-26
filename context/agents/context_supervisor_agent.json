@@ -20,7 +20,8 @@
                 "subtitle": "",
                 "prompt": "Ask the collaborator agent to show me the context variables"
             }
-        ],
+        ]
+	},
      "context_access_enabled": true,
      "collaborators": [
         "context_collaborator_agent"
