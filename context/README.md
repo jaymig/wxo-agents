@@ -1,6 +1,18 @@
 # Overview
 
-This set of agents and tools were created to demonstrate context_variable support within agents, tools, and eventually flows and knowledge.
+This set of agents and tools were created to demonstrate context_variable support within agents, tools, and eventually flows and knowledge.  This proceedure requires that you have [ADK installed](https://developer.watson-orchestrate.ibm.com/getting_started/installing), a developer or saas tenant and have [configured your environment](https://developer.watson-orchestrate.ibm.com/environment/initiate_environment).
+
+# Getting started
+
+Ready to install?
+
+1) Download this repo
+   
+
+2) Change into the 'context' directory
+3) Run the bash install script
+
+
 
 ## Scenario
 
