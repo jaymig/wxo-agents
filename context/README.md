@@ -7,10 +7,19 @@ This set of agents and tools were created to demonstrate context_variable suppor
 Ready to install?
 
 1) Download this repo
-   
+   ```
+   gh repo clone jaymig/wxo-agents
+   ```
 
 2) Change into the 'context' directory
+   ```
+   cd context
+   ```
+
 3) Run the bash install script
+   ```
+   bash ./deploy.sh
+   ```
 
 
 
