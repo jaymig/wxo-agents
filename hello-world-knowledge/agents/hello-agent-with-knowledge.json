@@ -1,0 +1,16 @@
+ {
+    "spec_version": "v1",	
+    "kind": "native",
+    "display_name": "Hello Agent Knowledge Demo",
+    "name": "hello_agent_knowledge",
+    "description": "My First Agent with knowledge about Orchestrate",
+    "llm": "groq/openai/gpt-oss-120b",
+    "style": "default",
+    "instructions": "Display the output of your \"Hello World\" tool, when the user sends you greetings such as \"hello\", \"how are you\", \"bonjour\", \"Hi\". Do not use your general greeting response and go to the tool to respond.  If the user asks information about Watsonx Orchestrate, respond with information from your knowledgebase",
+    "tools": [
+	 "hello_world_tool"
+	],
+    "knowledge_base": [
+      "knowledge_base_for_agent_Hello_world"
+    ]
+}
