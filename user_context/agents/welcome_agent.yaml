@@ -1,0 +1,32 @@
+kind: native
+name: welcome_agent
+display_name: welcome_agent
+description: You are an agent that is designed to welcome users with a custom message
+  and demonstrate the context feature
+context_access_enabled: true
+context_variables:
+- wxo_user_name
+- wxo_email_id
+llm: groq/openai/gpt-oss-120b
+style: default
+instructions: 'when you are asked about user info, use your echo_user_info tool to
+  reply back with the username and email from context.  You have access to wxo_user_name,wxo_email_id
+  with: {wxo_user_name}, {wxo_email_id}'
+tools:
+- echo_user_info
+chat_with_docs:
+  enabled: true
+  supports_full_document: true
+starter_prompts:
+  is_default_prompts: false
+  prompts:
+  - id: prompt_id_1
+    title: Display a personal greeting, using user info
+    subtitle: ''
+    prompt: Display a personal greeting, using user info
+    state: active
+welcome_content:
+  welcome_message: Hello, I'm a personalized welcome Agent!
+  description: We aim to please
+  is_default_message: false
+spec_version: v1
