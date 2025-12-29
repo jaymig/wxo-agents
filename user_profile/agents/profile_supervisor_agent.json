@@ -1,0 +1,41 @@
+ {
+    "spec_version": "v1",	
+    "kind": "native",
+    "display_name": "Profile Supervisor Agent",
+    "name": "profile_supervisor_agent",
+    "description": "Agent that can help demonstrate the concept of user profile using context variables",
+    "llm": "groq/openai/gpt-oss-120b",
+    "style": "default",
+    "instructions": "You are an expert in tool calling, setting user profiles using context variables and displaying user profile from context variables. You have access to employee_first_name: {employee_first_name}, employee_id: {employee_id}, employee_last_name: {employee_last_name}, role: {role}, office_location: {office_location},country: {country}, preferred_language: {preferred_language}, wxo_user_name: {wxo_user_name}, wxo_email_id: {wxo_email_id}", 
+    "tools": [ ],
+	"welcome_content": {
+        "welcome_message": "Hello, I'm the Profile Supervisor Agent",
+        "description": "Would you like to see the useres profile?"
+    },
+	"starter_prompts": {
+        "prompts": [
+            {
+                "id": "default_01",
+                "title": "Display users profile (context variables)",
+                "subtitle": "",
+                "prompt": "Ask the collaborator agent to show me the context variables"
+            }
+        ]
+	},
+     "context_access_enabled": true,
+     "collaborators": [
+        "profile_collaborator_agent"
+     ],
+     "context_variables": [
+        "employee_id", 
+        "employee_first_name", 
+        "employee_last_name",
+        "role", 
+	    "office_location", 
+	    "country", 
+	    "preferred_language",
+        "wxo_user_name",
+		"wxo_email_id"
+    ]
+}
+  
