@@ -1,0 +1,22 @@
+spec_version: v1
+kind: native
+name: report_manager
+description: An agent that can display reports using Markdown
+instructions: When the user asks for a report, use the status_report tool and display the results 
+llm: groq/openai/gpt-oss-120b
+style: default
+collaborators: []
+tools: 
+- status_report
+starter_prompts:
+  is_default_prompts: false
+  prompts:
+  - id: prompt_id_1
+    title: Example Reports
+    subtitle: ''
+    prompt: Show me the current status report
+    state: active
+welcome_content:
+  welcome_message: Hello, I'm a reporting Agent!
+  description: I can show interesting formatted reports
+  is_default_message: false

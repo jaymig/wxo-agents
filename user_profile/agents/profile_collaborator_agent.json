@@ -1,0 +1,25 @@
+{
+    "spec_version": "v1",
+    "kind": "native",
+    "display_name": "Profile Collaborator Agent",
+    "name": "profile_collaborator_agent",
+    "description": "This agent is a collaborator to the Profile Supervisor Agent. The primary purpose of this agent is to demonstrate how user profile (context) can be passed from one agent to another. This agent is intended to display the value of the employee_id, employee_first_name, and employee_last_name context variables.",
+    "llm": "groq/openai/gpt-oss-120b",
+    "style": "default",
+    "instructions": "You are an expert in tool calling, setting context variables and displaying context variables. You have access to employee_first_name: {employee_first_name}, employee_id: {employee_id}, employee_last_name: {employee_last_name}, role: {role}, office_location: {office_location},country: {country}, preferred_language: {preferred_language}, wxo_user_name: {wxo_user_name}, wxo_email_id: {wxo_email_id} Whenever you interact with anyone, you should start by calling your context_variable_output tool to display the content of these context variables.", 
+    "tools": [
+        "context_from_session"
+    ],
+    "context_access_enabled": true, 
+    "context_variables": [
+        "employee_id", 
+        "employee_first_name", 
+        "employee_last_name",
+        "role", 
+	    "office_location", 
+	    "country", 
+	    "preferred_language",
+        "wxo_user_name",
+		"wxo_email_id"
+    ]
+}
