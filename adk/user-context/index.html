@@ -879,38 +879,59 @@
 
 
 <h1 id="user-context-agent">User Context agent</h1>
-<p>This tutoral introduces of context variables and walks you through how to deploy an agent with the 'wxo_user_name' and 'wxo_email_id' context variables and demonstrate how a tool can read and display the values.  This tutorial assumes that you have completed the ADK <a href="../hello-world-adk/">Hello World ADK tutorial</a>.  These two context variables are the best to start with, since the default watsonx Orchstate chat portal sets the value of the variables during the session.  Custom context variables will be covered in a subsequent article.</p>
-<p>More information on context varibles is located in this <a href="https://developer.watson-orchestrate.ibm.com/agents/build_agent#providing-access-to-context-variables" target="_blank">ADK documentation</a></p>
-<p>In this tutoral you will:
-1. Create a new agent that is configured with the 'wxo_user_name' and 'wxo_email_id' context varibles.
-2. Add a tool that is able to read and display the context variables.
-3. Interact with the agent and have it demonstrate the value of the user context variables.</p>
+<p>This tutoral introduces context variables.  You are instructed how to deploy an agent which has been enabled with the <code>wxo_user_name</code> and <code>wxo_email_id</code> context variables and two tools that can read and display the values of those variables.  </p>
+<p>These two context variables are the best to start with, since the default watsonx Orchstate chat portal sets the value of the variables during the session.  Custom context variables are covered in a subsequent article(wip).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tutorial requires the use of the Agent Development Kit (ADK).  Installation of the ADK is outside of the scope of these tutorials.  Please see the <a href="https://developer.watson-orchestrate.ibm.com/getting_started/installing" target="_blank">ADK installation</a> documentation for details. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The agent spec file includes customized welcome message and starter prompts.  Please see the <a href="https://developer.watson-orchestrate.ibm.com/agents/build_agent#starter-prompts" target="_blank">Starter Prompt</a> documentation for details. </p>
+</div>
+<p>More information on context varibles is located in this <a href="https://developer.watson-orchestrate.ibm.com/agents/build_agent#providing-access-to-context-variables" target="_blank">ADK documentation</a>     </p>
+<p>In this tutorial you will:</p>
+<ol>
+<li>
+<p>Add tools to your tenant which are able to read and display the <code>wxo_user_name</code> and <code>wxo_email_id</code> context variables.</p>
+</li>
+<li>
+<p>Import an agent that is configured with support for the context variables.</p>
+</li>
+<li>
+<p>Interact with the agent and have it display the values of the variables.</p>
+</li>
+</ol>
 <h2 id="import-the-tools">Import the tools</h2>
 <ol>
 <li>
-<p>Download the example <a href="https://github.com/jaymig/wxo-agents/blob/main/user_context/tools/user_context.py" target="_blank">python tools</a> and the <a href="https://github.com/jaymig/wxo-agents/blob/main/user_context/tools/requirements.txt" target="_blank">reqiurements.txt file</a> into your 'demo' folder.
+<p>Download the example <a href="https://github.com/jaymig/wxo-agents/blob/main/user_context/tools/user_context.py" target="_blank">python tool spec file</a> and the <a href="https://github.com/jaymig/wxo-agents/blob/main/user_context/tools/requirements.txt" target="_blank">reqiurements.txt file</a> into your 'demo' folder.
 <br></p>
 </li>
 <li>
 <p>Import the tool file using the below command line
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>orchestrate tools import -k python -f ./user_context.py -r ./requirements.txt
 </span></code></pre></div>
-NOTE: It is important that you are running the 'orchestrate' command from the same directory as the user_context.py and requirements.txt files.</p>
-</li>
-</ol>
-<p>NOTE: This python file actually includes two tools.
+NOTE: It is important that you are running the 'orchestrate' command from the same directory as the user_context.py and requirements.txt files.
+<br>
+NOTE: This python file actually includes two tools.
 <br>
 You should see an output as follows:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[INFO] - Successfully imported tool &#39;...&#39;
-</span></code></pre></div>
-<br>
-3. Confirm that the tools were installed by listing the existing tools
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[INFO] - Using requirement file: &quot;./requirements.txt&quot;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[INFO] - Tool &#39;session_context&#39; imported successfully
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>[INFO] - Tool &#39;user_info&#39; imported successfully
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Confirm that the tools were installed by listing the existing tools
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>orchestrate tools list
 </span></code></pre></div>
 <br>
-If you see a knowledge base with the name 'knowledge_base_for_agent_Hello_world', congratulations.   It is time to import the agent that will use these tools.</p>
+If you see a knowledge base with the name <code>session_context</code> and <code>user_info</code>, congratulations.   It is time to import the agent that will use these tools.</p>
+</li>
+</ol>
 <h2 id="import-the-agent">Import the agent</h2>
-<p>The following steps guild you through importing the agent that is configured to use the tools that you just imported.  If the tools were not imported, this step will fail with an error message. </p>
+<p>The following steps guide you through importing the agent that is configured to use the tools that you imported in the previous section.  If the tools were not imported, this step will fail with an error message. </p>
 <ol>
 <li>
 <p>Download the <a href="https://github.com/jaymig/wxo-agents/blob/main/user_context/agents/welcome_agent.yaml" target="_blank">agent spec file</a>{target="_blank"} into your 'demo' folder.</p>
@@ -927,7 +948,8 @@ If successful, you should see the following message:
 </ol>
 <p>Congratulations!  Your agent is imported.  You can verify that it works by logging into Watsonx Orchestrate and chatting with it.</p>
 <h2 id="chat-with-the-agent">Chat with the Agent</h2>
-<p>Now that you have built the agent, you can interact with it right there in the builder experience.  This agent is configured with two </p>
+<p>Log into watsonx Orchestrate and navigate to the build pages.  You should see your newly imported agent at the top.
+Click on the <code>Welcome agent</code> agent icon to access the agent builder.  You can use the interact with it right there in the builder experience.  This agent is configured with two </p>
 <p>Try typing "How do I work with Agents" and see that the response comes from the knowledge file you just uploaded.</p>
 
 
