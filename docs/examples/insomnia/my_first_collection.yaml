@@ -1,0 +1,159 @@
+type: collection.insomnia.rest/5.0
+name: My first collection
+meta:
+  id: wrk_115017f9dc65424f9ee705b469b70eaf
+  created: 1756445427401
+  modified: 1756445427401
+  description: ""
+collection:
+  - url: "{{ _.auth_url }}"
+    name: Token Auth
+    meta:
+      id: req_1ff31f4d06f6406890aa2677ecae170b
+      created: 1756445427484
+      modified: 1756451573061
+      isPrivate: false
+      description: ""
+      sortKey: -1756445427484
+    method: POST
+    body:
+      mimeType: application/json
+      text: '{"apikey":"{{ _.api_key }}"}'
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    authentication:
+      type: none
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.wxo_url }}/v1/orchestrate/runs"
+    name: Runs API
+    meta:
+      id: req_942aeb1f76704356ba7372a9bffb10dd
+      created: 1756451628130
+      modified: 1756455151054
+      isPrivate: false
+      description: ""
+      sortKey: -1756451628130
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        "message":{
+        	"role":"user",
+        	"content":"Hello, How are you?"
+           },
+        "agent_id":"{{ _.agent_id }}"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.5.0
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_1ff31f4d06f6406890aa2677ecae170b',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+      prefix: "Bearer "
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.wxo_url }}/v1/orchestrate/agents"
+    name: List agents
+    meta:
+      id: req_3dcfc2bcf7c34f14819dee7e9e2ce4fb
+      created: 1756454855935
+      modified: 1756455116349
+      isPrivate: false
+      description: ""
+      sortKey: -1756454855935
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.5.0
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_1ff31f4d06f6406890aa2677ecae170b',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ _.wxo_url }}/v1/orchestrate/threads/{{ _.thread_id }}/messages"
+    name: Get messages by thread Id
+    meta:
+      id: req_58ecddc63f984c6aac179ea55ffb1ac1
+      created: 1756455238756
+      modified: 1756455450744
+      isPrivate: false
+      description: ""
+      sortKey: -1756455238756
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.5.0
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_1ff31f4d06f6406890aa2677ecae170b',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f65bd89f3e63ecbeb5f4625a0ac280f151b05fd6
+    created: 1756445427426
+    modified: 1756448103321
+  cookies:
+    - key: JSESSIONID
+      value: 0000WqLs8ZXux3Rl9FNhT2W5jv3:203921f4-5056-4744-9d8f-e78e00164da0
+      domain: iam.platform.saas.ibm.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-08-29T06:15:03.319Z
+      lastAccessed: 2025-08-29T06:15:03.319Z
+      id: de444819-4b1f-42b8-97f4-a7d6c82f4e14
+    - key: 309c92f456d83830bdb06345bfce4164
+      value: 15c60938b19f734153ea7aaae7d758ef
+      domain: iam.platform.saas.ibm.com
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: true
+      creation: 2025-08-29T06:15:03.321Z
+      lastAccessed: 2025-08-29T06:15:03.321Z
+      sameSite: none
+      id: d21b6858-8a0f-48b8-a660-147d954ba99e
+environments:
+  name: Base Environment
+  meta:
+    id: env_f65bd89f3e63ecbeb5f4625a0ac280f151b05fd6
+    created: 1756445427425
+    modified: 1756445427425
+    isPrivate: false

@@ -1,0 +1,176 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "demo_tools",
+        "description": "A series of demonstration tools",
+        "version": "0.1",
+        "x-ibm-application-name": "Demo Tools",
+        "x-ibm-application-id": "demoapp",
+        "x-ibm-skill-type": "imported",
+        "x-ibm-skill-subtype": "public"
+    },
+    "servers": [
+        {
+            "url": "https://zqy06vg1g3.execute-api.us-west-1.amazonaws.com"
+        }
+    ],
+    "paths": {
+        "/demo/draft-email": {
+            "post": {
+                "summary": "Draft an email",
+                "description": "Prompt for input, draft email and display example",
+                "requestBody": {
+                    "description": "Please provide name, email and message",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/hello-name-input"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Draft email message, and recipient",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/hello-name-output"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/demo/contact-details": {
+            "get": {
+                "summary": "Contact details",
+                "description": "Displays the contact details",
+                "responses": {
+                    "200": {
+                        "description": "Contact Details",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/contact-details"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+                "/demo/department-contacts": {
+            "get": {
+                "summary": "Department Contacts",
+                "description": "Displays a simple table of Department contacts",
+                "responses": {
+                    "200": {
+                        "description": "Department Contacts",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/department-contacts"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "hello-name-input": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Frank"
+                    },
+                        "email": {
+                        "type": "string",
+                        "example": "frank@acme.com"
+                    },
+                        "message": {
+                        "type": "string",
+                        "example": "I found a bug in the product"
+                    }
+                }
+            },
+            "hello-name-output": {
+                "type": "object",
+                "properties": {
+                    "greeting": {
+                        "type": "string",
+                        "example": "Hello Jay"
+                    }
+                }
+            },
+            "contact-details": {
+                "type": "object",
+                "properties": {
+                    "body": {
+                        "type": "object",
+                        "properties": {
+                            "contact_details": {
+                                "type": "array",
+                                "title": "Contact details",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "title": "First Name",
+                                            "example": "Sally"
+                                        },
+                                        "email": {
+                                            "type": "string",
+                                            "title": "Email address",
+                                            "example": "sally@acme.com"
+                                        },
+                                            "phone_number": {
+                                            "type": "string",
+                                            "title": "Phone Number",
+                                            "example": "111-222-3333"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "department-contacts": {
+                "type": "object",
+                "properties": {
+                    "body": {
+                        "type": "object",
+                        "properties": {
+                            "department_contacts": {
+                                "type": "array",
+                                "title": "Department Contacts",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "name": {
+                                            "type": "string",
+                                            "title": "First Name",
+                                            "example": "Sally"
+                                        },
+                                        "department": {
+                                            "type": "string",
+                                            "title": "Department",
+                                            "example": "Sales"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+type: environment.insomnia.rest/5.0
+name: Hello world demo environment
+meta:
+  id: wrk_9a94d3e9c6ad4dbf91ba5b9f792d4ef6
+  created: 1756445555426
+  modified: 1756445555426
+  description: ""
+environments:
+  name: Base Environment
+  meta:
+    id: env_78004c4659aeaa8106742b15c922626edd93de71
+    created: 1756445555445
+    modified: 1756455339125
+    isPrivate: false
+  data:
+    auth_url: https://iam.platform.saas.ibm.com/siusermgr/api/1.0/apikeys/token
+    api_key: YOUR_API_KEY
+    wxo_url: YOUR_WXO_TENANT_URL
+    agent_id: YOUR_AGENT_ID
+    thread_id: YOUR_THREAD_ID

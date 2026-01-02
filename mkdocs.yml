@@ -1,0 +1,53 @@
+site_name: Watsonx Orchestrate Tutorials
+
+nav: 
+  - Overview: 'index.md' 
+  - Hello World Agent: 'wxo-agents/hello-world.md'
+  - "Agent examples" :
+    - "Department Contact Agent" : "wxo-agents/department-contact.md"    
+  - "ADK examples" :
+    - "Getting Started with ADK": "adk/getting-started-adk.md"
+    - "Hello World Agent" : "adk/hello-world-adk.md"
+    - "Hello Knowledge" : "adk/hello-knowledge.md"    
+  - "Embedded examples" :
+    - "Floating panel chat" : "embedded/hello-world-embedded.md"  
+  - "API examples" :
+    - "Overview": "api/overview.md"
+    - "Authentication": "api/api-authentication.md"
+    - "List agents": "api/list-agents.md"
+    - "Chat with agent" : "api/chat-with-agent.md" 
+    - "View message" : "api/list-messages.md"         
+    - "Context": "api/setting_context.md"     
+  - "Appendix" :
+    - "Resources" : "resources/resources.md"
+    - "Article todo list": "resources/todo.md"
+    - "Work in Progress: Context": "context/context-passing.md"  
+    - "Work in Progress; Configuring keys": "context/configuring-keys.md" 
+    - "Work in Progress; Creating Web App": "context/creating_web_app.md" 
+
+
+theme:
+  name: material
+  features:
+    - content.code.copy  
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - glightbox
+
+extra_css:
+  - extra.css  
