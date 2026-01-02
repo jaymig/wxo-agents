@@ -8,7 +8,7 @@ def user_info(wxo_user_name: str, wxo_email_id: str):
     """
     Takes a user name and email ID, and returns a formatted message.
     """
-    return  f"Hello, {wxo_user_name}! Your user_info email as {wxo_email_id}."
+    return  f"Hello, {wxo_user_name}! Your user_info email is {wxo_email_id}."
 
 
 @tool
