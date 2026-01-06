@@ -22,7 +22,7 @@ def context_from_session(context: AgentRun) -> str:
     employee_last_name   = safe_get('employee_last_name')
     country              = safe_get('country')
     role                 = safe_get('role')
-    preferred_language   = safe_get('preferred_langauge')
+    preferred_language   = safe_get('preferred_language')
 
     return (
         f"Hello, {wxo_user_name}! "
