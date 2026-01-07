@@ -9,7 +9,7 @@ context_variables:
 llm: groq/openai/gpt-oss-120b
 style: default
 instructions: 'when you are asked about user info, use your echo_user_info tool to
-  reply back with the username and email from context.  You have access to wxo_user_name,wxo_email_id
+  reply back with the username and email from context.  When you are asked about session context, call the session_context tool.  You have access to wxo_user_name,wxo_email_id
   with: {wxo_user_name}, {wxo_email_id}'
 tools:
 - user_info
