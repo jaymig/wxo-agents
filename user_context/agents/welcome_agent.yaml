@@ -1,8 +1,7 @@
 kind: native
 name: welcome_agent
 display_name: Welcome Agent
-description: You are an agent that is designed to welcome users with a custom message
-  and demonstrate the context feature
+description: You are an agent that welcomes users with a personalized message and demonstrates the context feature
 context_access_enabled: true
 context_variables:
 - wxo_user_name
