@@ -901,6 +901,9 @@
 <li>
 <p>Interact with the agent and have it display the values of the variables.</p>
 </li>
+<li>
+<p>The examples used in this tutorial are located in the user_info folder of this <a href="https://github.com/jaymig/wxo-agents" target="_blank">git repository</a>.  The repo contains deploy script which can be used to install the agent and tools.  Alternatively, you can follow the step by step instructions below.</p>
+</li>
 </ol>
 <h2 id="import-the-tools">Import the tools</h2>
 <ol>
@@ -934,7 +937,7 @@ If you see a knowledge base with the name <code>session_context</code> and <code
 <p>The following steps guide you through importing the agent that is configured to use the tools that you imported in the previous section.  If the tools were not imported, this step will fail with an error message. </p>
 <ol>
 <li>
-<p>Download the <a href="https://github.com/jaymig/wxo-agents/blob/main/user_context/agents/welcome_agent.yaml" target="_blank">agent spec file</a>{target="_blank"} into your 'demo' folder.</p>
+<p>Download the <a href="https://github.com/jaymig/wxo-agents/blob/main/user_context/agents/welcome_agent.yaml" target="_blank">agent spec file</a> into your 'demo' folder.</p>
 </li>
 <li>
 <p>Import the agent configuration file with the following command
@@ -949,7 +952,7 @@ If successful, you should see the following message:
 <p>Congratulations!  Your agent is imported.  You can verify that it works by logging into Watsonx Orchestrate and chatting with it.</p>
 <h2 id="chat-with-the-agent">Chat with the Agent</h2>
 <p>Log into watsonx Orchestrate and navigate to the build pages.  You should see your newly imported agent at the top.
-Click on the <code>Welcome agent</code> agent icon to access the agent builder.  You can use the interact with it right there in the builder experience using the customized starter prompts.  This agent is configured with two starter prompts, one for each tool.</p>
+Click on the <code>Welcome agent</code> agent icon to access the agent builder.  You can interact with it right there in the builder experience using the customized starter prompts.  This agent is configured with two starter prompts, one for each tool.</p>
 <p><a class="glightbox" href="../../images/user_context/welcome_agent.png#shadow#center" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Starter Prompts" src="../../images/user_context/welcome_agent.png#shadow#center" style="height:400x;width:400px" /></a></p>
 <p>The <code>user_info</code> tool is configured to receive the context variables from the agent, when the agent calls the tool.  You can see that in the tool definition:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>...
