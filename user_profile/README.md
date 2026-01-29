@@ -13,7 +13,7 @@ Ready to install?
 
 2) Change into the 'context' directory
    ```
-   cd context
+   cd user_profile
    ```
 
 3) Run the bash install script
