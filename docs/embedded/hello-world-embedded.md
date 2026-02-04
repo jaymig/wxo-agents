@@ -1,12 +1,12 @@
 # Embedded Hello World
 
 !!! note
-     This tutorial requires the use of the Agent Development Kit (ADK).  Installation of the ADK is outside of the scope of these tutorials.  Please see the [ADK installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing) documentation for details.
+     This tutorial requires the use of the Agent Development Kit (ADK).  Installation of the ADK is outside of the scope of these tutorials.  Please see the [ADK installation](https://developer.watson-orchestrate.ibm.com/getting_started/installing){target="_blank"} documentation for details.
 
 !!! note
-     Watsonx Orchstrate has enabled embedded security by default, which is a good setting for production use, but may not be necessary for simple and short duration demonstrations of embedded Watsonx Orchestrate.  The instructions below will only work if you have disabled security, which is only possible using the ADK.  Please see the [ADK](https://developer.watson-orchestrate.ibm.com/agents/integrate_agents#enabling-security) documentation for details on how how to configure security.  The next tutorial will guide you through setting up security, keys and a secure embedded web chat.
+     Watsonx Orchstrate has enabled embedded security by default, which is a good setting for production use, but may not be necessary for simple and short duration demonstrations of embedded Watsonx Orchestrate.  The instructions below will only work if you have disabled security, which is only possible using the ADK.  Please see the [ADK](https://developer.watson-orchestrate.ibm.com/agents/integrate_agents#enabling-security){target="_blank"} documentation for details on how how to configure security.  The next tutorial will guide you through setting up security, keys and a secure embedded web chat.
 
-Once you have completed your first [Hello World Agent](../wxo-agents/hello-world.md){target="_blank"},  follow the steps below to learn how to embed your agent in a simple web page. This tutorial follows these [ADK instructions](https://developer.watson-orchestrate.ibm.com/manage/channels#watsonx-orchestrate-channels-web-chat).
+Once you have completed your first [Hello World Agent](../wxo-agents/hello-world.md){target="_blank"},  follow the steps below to learn how to embed your agent in a simple web page. This tutorial follows these [ADK instructions](https://developer.watson-orchestrate.ibm.com/manage/channels#watsonx-orchestrate-channels-web-chat){target="_blank"}.
 
 
 ## End Result
@@ -26,11 +26,25 @@ The following steps guild you through creating a simple web page with an embedde
 
 1. Create a text file with the following content, and save it at index.html
 ```
-<html>
-  <body>
-    <h1>Hello Agent Demo page</h1>
-    <style> h1 {text-align: center;} </style>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Agent Demo</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello Agent Demo page</h1>
+
+  <script>
+    ...
+  </script>
+</body>
 </html>
 ```
 
@@ -60,10 +74,20 @@ The output should look like this:
 
 3. Copy that content into your index.html page in side of the <body></body> section.  The final file should look something like this (note I have obfuscated my agent and orchestration id):
 ```
-<!DOCTYPE HTML>
-    <body>
-            <h1>Hello Agent Demo page</h1>
-            <style> h1 {text-align: center;} </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello Agent Demo</title>
+  <style>
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello Agent Demo page</h1>
             <script>
                 window.wxOConfiguration = {
                     orchestrationID: "20250430-1111-2222-40a1-cbba52234762",

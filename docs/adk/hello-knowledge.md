@@ -3,12 +3,14 @@
 This tutoral expands upon the Hello World example and adds a working example for importing  knowledge using the ADK.  This tutorial assumes that you have completed the ADK [Hello World ADK tutorial](./hello-world-adk.md). 
 
 In this tutoral you will:
+
 1. Import knowlege using the ADK (using the embeded Milvus vector store)
+
 2. Re-import the agent, using an updated agent file, specifying the knowledge source imported in step 1.
 
 ## Import the knowledge
 
-1. Download the example knowledge configuration file is located [here](./../examples/hello-world/knowledge/knowledge-base.json) into your 'demo' folder.
+1. Download the example knowledge configuration file is located [here](https://github.com/jaymig/wxo-agents/blob/main/hello-world-knowledge/knowledge/knowledge_base.json){target="_blank"} and the PDF file located [here](https://github.com/jaymig/wxo-agents/blob/main/hello-world-knowledge/knowledge/IBM%20watsonx%20Orchestrate%20Doc.pdf){target="_blank"} into your 'demo' folder.
 <br>
 
 2. Import this knowledge file using the below command line
@@ -34,7 +36,7 @@ If you see a knowledge base with the name 'knowledge_base_for_agent_Hello_world'
 
 The following steps guild you through updating the "Hello World" agent with the new configuration.   We will simply import the agent with the new configuration file.
 
-1. Download the new agent configuration file from [here](./../examples/hello-world/agents/hello-agent-with-knowledge.json)
+1. Download the new agent configuration file from [here](https://github.com/jaymig/wxo-agents/blob/main/hello-world-knowledge/agents/hello-agent-with-knowledge.json){target="_blank"}
 
 2. Import the agent configuration file with the following command
 ```

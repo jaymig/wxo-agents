@@ -8,6 +8,6 @@
 
 4. watsonx Orchestrate documentation for the [Agent Builder](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/current?topic=agents-overview-agent-builder){target="_blank"}
 
-5. [Building tools](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=building-tools) in watsonx Orchestrate
+5. [Building tools](https://www.ibm.com/docs/en/watsonx/watson-orchestrate/base?topic=building-tools){target="_blank"} in watsonx Orchestrate
 
-6. Tutorial: [Creating your first agent on Agent builder (ADK)](https://developer.watson-orchestrate.ibm.com/tutorials/tutorial_1_hello_world) 
+6. Tutorial: [Creating your first agent on Agent builder (ADK)](https://developer.watson-orchestrate.ibm.com/tutorials/tutorial_1_hello_world){target="_blank"}

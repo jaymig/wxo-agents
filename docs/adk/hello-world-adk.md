@@ -14,7 +14,7 @@ This tutorial will guide you through importing the "Hello World" tool and agent 
 
 ## Import the tool and agent step by step
 
-Before proceeding, please download the ["Hello World" tool spec file](../examples/hello-world/tools/hello-world-tool.json) and the ["Hello World" agent spec file](../examples/hello-world/agents/hello-agent.json) to your local system.  For my example, I placed them in my desktop in a 'demo' folder.
+Before proceeding, please download the ["Hello World" tool spec file](https://github.com/jaymig/wxo-agents/blob/main/hello-world/tools/hello-world-tool.json){target="_blank"} and the ["Hello World" agent spec file](https://github.com/jaymig/wxo-agents/blob/main/hello-world/agents/hello-agent.json){target="_blank"} to your local system.  For my example, I placed them in my desktop in a 'demo' folder.
 
 1. Login to your terminal and navigate to the folder "demo" folder on your desktop.
 ```

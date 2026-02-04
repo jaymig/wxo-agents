@@ -32,10 +32,10 @@ Example text:
      Use the uploaded file to respond to questions about watsonx Orchestrate, tools or AI agents.
 <br><br>
 
-5. Scroll down a bit further and click 'upload files' to upload this [watsonx Orchestrate documentation file](../examples/hello-world/knowledge/IBM%20watsonx%20Orchestrate%20Doc.pdf){target="_blank"}. <br><br>
+5. Scroll down a bit further and click 'upload files' to upload this [watsonx Orchestrate documentation file](https://github.com/jaymig/wxo-agents/blob/main/hello-world-knowledge/knowledge/IBM%20watsonx%20Orchestrate%20Doc.pdf){target="_blank"}. <br><br>
 ![Uploaded file](../images/upload_document.png#shadow#center){: style="height:400x;width:400px"}<br><br>
 
-6. The next step is to add a tool.  Scroll down to the "Toolset" section and click on "Add tool", then select "Import" to Import an External Tool and upload this [Hello World Tool spec file](../examples/hello-world/tools/hello-world-tool.json){target="_blank"}. 
+6. The next step is to add a tool.  Scroll down to the "Toolset" section and click on "Add tool", then select "Import" to Import an External Tool and upload this [Hello World Tool spec file](https://github.com/jaymig/wxo-agents/blob/main/hello-world/tools/hello-world-tool.json){target="_blank"}. 
 <br><br>
 ![Add Tool](../images/add_tool.png#shadow#center){: style="height:400x;width:400px"}
 <br><br>

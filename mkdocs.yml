@@ -9,8 +9,10 @@ nav:
     - "Getting Started with ADK": "adk/getting-started-adk.md"
     - "Hello World Agent" : "adk/hello-world-adk.md"
     - "Hello Knowledge" : "adk/hello-knowledge.md"    
+    - "User Context" : "adk/user-context.md"      
   - "Embedded examples" :
     - "Floating panel chat" : "embedded/hello-world-embedded.md"  
+    - "Customizing your chat" : "embedded/custom_embedded.md"      
   - "API examples" :
     - "Overview": "api/overview.md"
     - "Authentication": "api/api-authentication.md"
