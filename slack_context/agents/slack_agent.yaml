@@ -1,0 +1,31 @@
+kind: native
+name: slack_agent
+display_name: Slack Agent
+description: You are an agent that demonstrates the context feature, in particular with slack context
+context_access_enabled: true
+context_variables:
+- wxo_user_name
+- wxo_email_id
+- channel
+llm: groq/openai/gpt-oss-120b
+style: default
+instructions: 'when you are to display context, use your slack_context tool and display all of the output from that tool.  When you are asked about session context, call the session_context tool.  You have access to wxo_user_name,wxo_email_id
+  with: {wxo_user_name}, {wxo_email_id}, {channel}'
+tools:
+- slack_context
+chat_with_docs:
+  enabled: true
+  supports_full_document: true
+starter_prompts:
+  is_default_prompts: false
+  prompts:
+  - id: prompt_id_1
+    title: Display the context from slack, using slack_context
+    subtitle: ''
+    prompt: Display the output of slack_context tool
+    state: active  
+welcome_content:
+  welcome_message: I'm a Slack demonstration Agent!
+  description: We like to slack
+  is_default_message: false
+spec_version: v1

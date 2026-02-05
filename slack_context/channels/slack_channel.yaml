@@ -1,0 +1,11 @@
+name: "slack_demo_channel"
+description: "Channel for Slack bot to display context"
+channel: "byo_slack"
+spec_version: "v1"
+kind: "channel"
+client_id: "SLACK_BOT_CLIENT_ID"
+client_secret: "SLACK_BOT_CLIENT_SECRET"
+signing_secret: "SLACK_BOT_SIGNING_SECRET"
+teams:
+  - id: "SLACK_WORKSPACE_ID"
+    bot_access_token: "BOT_ACCESS_TOKEN"
