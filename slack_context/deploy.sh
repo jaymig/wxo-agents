@@ -11,5 +11,6 @@ orchestrate agents import -f ./agents/slack_agent.yaml
 orchestrate agents deploy --name slack_agent
 
 ## deploy channel
-orchestrate channels import --agent-name slack_agent --env live  --file channels/slack_channel.yaml
+## note that slack_channel.yaml is a placeholder, and actual values are in .slack_channel.yaml
+orchestrate channels import --agent-name slack_agent --env live  --file channels/.slack_channel.yaml
 
