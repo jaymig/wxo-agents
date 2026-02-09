@@ -1,5 +1,4 @@
 from ibm_watsonx_orchestrate.agent_builder.tools import tool
-from ibm_watsonx_orchestrate.util import update_tool_context
 from ibm_watsonx_orchestrate.run.context import AgentRun
 
 @tool
