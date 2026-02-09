@@ -8,12 +8,7 @@ def user_info(wxo_user_name: str, wxo_email_id: str):
     """
     Takes a user name and email ID, and returns a formatted message.
     """
-<<<<<<< Updated upstream
     return  f"Hello, {wxo_user_name}! Your user_info email is {wxo_email_id}."
-=======
-    return  f"Hello, {wxo_user_name}! Your user_info email as {wxo_email_id}."
->>>>>>> Stashed changes
-
 
 @tool
 def session_context(context: AgentRun) -> str:
@@ -30,9 +25,5 @@ def session_context(context: AgentRun) -> str:
 
     wxo_user_name        = safe_get('wxo_user_name')
     wxo_email_id         = safe_get('wxo_email_id')
- 
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
     return f"Hello, {wxo_user_name}!,  Your session_context email is: {wxo_email_id}"
