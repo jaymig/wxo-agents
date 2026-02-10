@@ -12,6 +12,7 @@ orchestrate agents remove -n slack_agent -k native
 
 ## remove tools
 orchestrate tools remove --name slack_context
-#orchestrate tools remove --name update_user_context
+orchestrate tools remove --name update_user_context
+# orchestrate tools remove --name user_info 
 orchestrate tools remove --name sync_slack_to_wxo_context
 

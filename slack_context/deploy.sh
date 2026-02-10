@@ -5,6 +5,7 @@ set -x
 orchestrate tools import -k python -f ./tools/slack_context.py
 orchestrate tools import -k python -f ./tools/update_user_context.py
 orchestrate tools import -k python -f ./tools/sync_slack_to_wxo_context.py
+orchestrate tools import -k python -f ./tools/set_user_context.py
 
 ## Import slack agent
 orchestrate agents import -f ./agents/slack_agent.yaml
