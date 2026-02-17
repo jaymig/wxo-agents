@@ -2,7 +2,7 @@ from ibm_watsonx_orchestrate.agent_builder.tools import tool
 from ibm_watsonx_orchestrate.run.context import AgentRun
 
 @tool
-def update_user_context(context: AgentRun, new_email: str, new_user_name: str) -> str:
+def update_user_context(context: AgentRun) -> str:
     """
     Demonstrates how to set wxo_email_id and wxo_user_name context variables:
     - Set wxo_email_id and wxo_user_name together via update() (bulk).
@@ -19,8 +19,8 @@ def update_user_context(context: AgentRun, new_email: str, new_user_name: str) -
 
     # --- Bulk update for multiple related keys
     req_context.update({
-        "wxo_email_id": new_email,
-        "wxo_user_name": new_user_name,
+        "wxo_email_id": "micky@disney.com",
+        "wxo_user_name": "mickey mouse"
     })
 
     # --- Read back to confirm
