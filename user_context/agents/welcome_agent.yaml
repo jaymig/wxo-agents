@@ -14,6 +14,9 @@ instructions: 'when you are asked about user info, use your echo_user_info tool 
 tools:
 - user_info
 - session_context
+- update_user_context
+- update_user_profile
+- read_user_profile
 chat_with_docs:
   enabled: true
   supports_full_document: true
@@ -30,6 +33,16 @@ starter_prompts:
     subtitle: ''
     prompt: Display the output of session_context tool
     state: active    
+  - id: prompt_id_3
+    title: Update the profile
+    subtitle: ''
+    prompt: update_user_profile
+    state: active
+  - id: prompt_id_4
+    title: Display the contents of profile
+    subtitle: ''
+    prompt: read_user_profile
+    state: active             
 welcome_content:
   welcome_message: Hello, I'm a personalized welcome Agent!
   description: We aim to please
