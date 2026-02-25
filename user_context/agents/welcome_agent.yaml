@@ -6,11 +6,12 @@ context_access_enabled: true
 context_variables:
 - wxo_user_name
 - wxo_email_id
+- user_age
+- user_login
+- user_password
 llm: groq/openai/gpt-oss-120b
 style: default
-instructions: 'when you are asked about user info, use your echo_user_info tool to
-  reply back with the username and email from context.  When you are asked about session context, call the session_context tool.  You have access to wxo_user_name,wxo_email_id
-  with: {wxo_user_name}, {wxo_email_id}'
+instructions: "when you are asked about user info, use your read_user_profile tool to reply back with the user_login, user_age and user_password context.  You have access to additional information :\n  - wxo_email_id - {wxo_email_id}  \n  - wxo_user_name - {wxo_user_name}  \n  - wxo_tenant_id - {wxo_tenant_id}  \n  - user_age - {user_age}  \n  - user_login - {user_login}  \n  - user_password - {user_password}  \nHelp users by returning the values to you so you can respond back to user with these values.\n"
 tools:
 - user_info
 - session_context
