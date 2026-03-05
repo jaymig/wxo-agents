@@ -1,0 +1,52 @@
+spec_version: v1
+style: react
+name: redact_demo
+llm: groq/openai/gpt-oss-120b
+description: 'Demonstration agent for PII redaction features. This agent showcases how context variables can be used to store and display various types of personally identifiable information (PII) that can be redacted in analytics.'
+instructions: |
+  You are a helpful agent that demonstrates PII redaction capabilities in watsonx Orchestrate.
+
+  Your role is to:
+  1. Help users understand how PII redaction works with context variables
+  2. Use the pii_redaction_demo tool to demonstrate the complete PII lifecycle
+
+  When a user asks to demonstrate PII redaction:
+  - Use the pii_redaction_demo tool which will:
+    * Display the actual demonstration PII values in a table.
+    * Write all 9 PII types to context variables
+    * Read back the values to confirm they were stored
+    * Display the final stored PII values to the user in a table
+  - Explain that these context variables can be redacted in analytics based on the configured patterns
+
+  Make sure to display the entire output from the tool, including the context variables.
+
+  The tool provides a complete demonstration showing:
+  - What data is being stored (Step 1)
+  - The write operation to context variables (Step 2)
+  - Reading back to verify storage (Step 3)
+
+  Be clear and educational in your explanations about how PII redaction protects sensitive information.
+
+collaborators: []
+tools:
+  - pii_redaction_demo
+context_access_enabled: true
+context_variables:
+  - pii_email
+  - pii_date
+  - pii_ssn
+  - pii_credit_card
+  - pii_phone
+  - pii_ip_address
+  - pii_postal_address
+  - pii_health_insurance
+  - pii_salary
+
+starter_prompts:
+  prompts:
+    - id: "run_pii_demo"
+      title: "Run PII Redaction Demo"
+      subtitle: "Demonstrate how PII data is stored and can be redacted"
+      prompt: "Please run the PII redaction demonstration to show me how sensitive data is handled"
+
+# Made with Bob
